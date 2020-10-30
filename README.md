@@ -1,6 +1,6 @@
 # Selector Safari
 
-![Production Build](https://github.com/uclaacm/teach-la-react-starter-barebones/workflows/Production%20Build/badge.svg)
+![Production Build](![Production Build](https://github.com/uclaacm/selector-safari/workflows/Production%20Build/badge.svg))
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
@@ -11,15 +11,6 @@ Selector Safari is a WIP game for learning CSS selectors!
 Selector Safari is made by Drew, Nandana, Kevin, Janis, Nhi, and Lisha from the Teach LA Dev team.
 
 This project is the brainchild of [Matt](https://github.com/malsf21) and is inspired by [Flexbox Froggy](https://flexboxfroggy.com/), [Grid Garden](https://cssgridgarden.com/), and [Flexbox Defense](http://www.flexboxdefense.com/). It uses [React](https://reactjs.org/). We promise it will be playable soon :)
-
-## Things You Should Do (and then delete this section)
-
-Thanks for using our template! We hope this makes your life developing significantly easier.
-
-Things you should do **after using this as a template**:
-
-- [ ] update the README badges for the GitHub Actions and Netlify with the correct links!
-- [ ] update and delete this documentation!
 
 ## Development Setup
 
