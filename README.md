@@ -1,22 +1,16 @@
-# Your Teach LA Project Here!
+# Selector Safari
 
 ![Production Build](https://github.com/uclaacm/teach-la-react-starter-barebones/workflows/Production%20Build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
-What's this? This is a template repository that sets up a few minor systems for a React micro-app, which is something that we've done frequently at Teach LA. Here's what it does:
-
-* has the latest, dependabot-certified version of `create-react-app` and dependencies
-* has GitHub Actions automatically set up for testing builds
-* has Netlify redirects set up for multi-route SPAs
-* includes the [Contributor Covenant](https://www.contributor-covenant.org/) in `CODE_OF_CONDUCT.md`
-* has a little bit of documentation for new people!
-
-We are also planning on creating a more opinionated starter (with `react-router-dom`, stricter ESLint checks, auto-formatting, and fonts) soon! Keep an eye out for that!
-
 ## Overview
 
-... explain what your project is here! What technology you used, who made it, and what it was for!
+Selector Safari is a WIP game for learning CSS selectors! 
+
+Selector Safari is made by Drew, Nandana, Kevin, Janis, Nhi, and Lisha from the Teach LA Dev team.
+
+This project is the brainchild of [Matt](https://github.com/malsf21) and is inspired by [Flexbox Froggy](https://flexboxfroggy.com/), [Grid Garden](https://cssgridgarden.com/), and [Flexbox Defense](http://www.flexboxdefense.com/). It uses [React](https://reactjs.org/). We promise it will be playable soon :)
 
 ## Things You Should Do (and then delete this section)
 
@@ -24,10 +18,6 @@ Thanks for using our template! We hope this makes your life developing significa
 
 Things you should do **after using this as a template**:
 
-- [ ] find-and-replace `selector-safari` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
-- [ ] set up [Netlify](https://www.netlify.com/) for this app - talk to matt (@malsf21) or leo (@krashanoff) if you need access to the Teach LA Netlify team
-- [ ] turn on "Automatically delete head branches" in GitHub `Settings > Options`
-- [ ] in `Settings > Branches`, create a branch protection rule that requires PR reviews. You can optionally enable status checks.
 - [ ] update the README badges for the GitHub Actions and Netlify with the correct links!
 - [ ] update and delete this documentation!
 
