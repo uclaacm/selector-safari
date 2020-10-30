@@ -1,6 +1,6 @@
 # Selector Safari
 
-![Production Build](![Production Build](https://github.com/uclaacm/selector-safari/workflows/Production%20Build/badge.svg))
+![Production Build](https://github.com/uclaacm/selector-safari/workflows/Production%20Build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
