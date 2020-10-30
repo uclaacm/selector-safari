@@ -24,7 +24,7 @@ Thanks for using our template! We hope this makes your life developing significa
 
 Things you should do **after using this as a template**:
 
-- [ ] find-and-replace `YOUR_PROJECT_URL_HERE` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
+- [ ] find-and-replace `selector-safari` with your GitHub repo's project name in this README (it's in a few places, so use an editor!)
 - [ ] set up [Netlify](https://www.netlify.com/) for this app - talk to matt (@malsf21) or leo (@krashanoff) if you need access to the Teach LA Netlify team
 - [ ] turn on "Automatically delete head branches" in GitHub `Settings > Options`
 - [ ] in `Settings > Branches`, create a branch protection rule that requires PR reviews. You can optionally enable status checks.
@@ -38,8 +38,8 @@ We'll use a really common Node.js project workflow!
 First, let's clone our repository, and install all of our node dependencies:
 
 ```
-git clone https://github.com/uclaacm/YOUR_PROJECT_URL_HERE.git
-cd YOUR_PROJECT_URL_HERE
+git clone https://github.com/uclaacm/selector-safari.git
+cd selector-safari
 npm install
 ```
 
@@ -64,7 +64,7 @@ Want to make a change? Great! Here are the steps:
 3. Make your changes!
 4. **Before you push**, make sure your app builds with `npm run build`. If there are any errors, our CI/CD service will **reject your build**.
 5. Once you're ready, stage and commit your changes!
-6. Make a [pull request](https://github.com/uclaacm/YOUR_PROJECT_URL_HERE/pulls) with your changes, and let someone on the dev team know. Netlify has a neat feature called "Deploy Previews" that give you a link to preview your changes; [see the blog post](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) for more info!
+6. Make a [pull request](https://github.com/uclaacm/selector-safari/pulls) with your changes, and let someone on the dev team know. Netlify has a neat feature called "Deploy Previews" that give you a link to preview your changes; [see the blog post](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) for more info!
 7. If your code passes code review, we'll merge it into `master`. Congratulations! If you'd like, it's now safe to delete your branch/fork.
 
 ## Licensing & Attribution
