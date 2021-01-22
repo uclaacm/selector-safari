@@ -1,38 +1,60 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  text-align: left;
   min-height: 100vh;
+  background-color: #F3C94F;
+  z-index: -1;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  height: 183px;
+  background-color: #8EB9D8;
+}
+
+.Title {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  font-size: 96px;
+  font-family: "Fredoka One";
+  color: #36251D;
+}
+
+.Header a {
+  font-family: "Lato";
+  font-size: 28px;
+  font-weight: bolder;
+  text-decoration: underline;
+  color: #36251D;
+}
+
+.TutorialButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LevelButton {
+  width: 267px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Levels {
+  background-color: #36251D;
+  width: 267px;
+  height: 528px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  float: right;
 }
 
-.App-link {
-  color: #61dafb;
+.Levels a {
+  font-size: 28px;
+  font-family: "Lato";
+  color: #8EB9D8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

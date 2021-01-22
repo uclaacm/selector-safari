@@ -1,0 +1,20 @@
+.LevelNav {
+    width: 267px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LevelNav p {
+    font-size: 28px;
+    font-family: "Lato";
+    font-weight: bolder;
+    color: #36251D;
+    text-decoration: underline;
+}
+
+.LevelNav a {
+    color: #36251D;
+    margin-top: 15px;
+    font-size: 50px;
+}
