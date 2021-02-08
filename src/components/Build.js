@@ -1,27 +1,14 @@
-import { ReactComponent as Zebra } from './assets/Zebra.svg';
+import React from 'react'
 
-class Zebraa{
-    constructor(name) {
-        this.name = name;
-    }
-}
-
-export function Build (props){
-
-    let joe = Zebraa('joe')
-    let jeff = Zebraa('jeff')
-    let jerry = Zebraa('jerry')
-
-    let level1 = {
-        "zebra": [joe, jeff, jerry]
-    }
-    let level2 = {
-        "zebra": 2
-    }
+export default function Build (props){
     return (
-        <div>
+        <div id = "Board" style = {{backgroundColor:"lightyellow",height:"800px", width:"800px", border: '2px solid black', position:"fixed", left:"500px", top:"50px"}}>
             {
-                level1.zebra.map((z)=>{return <Zebra/>} )
+                props.level.gamepeices.map((z)=>{
+                    return(
+                        z.sticker
+                    )
+                } )
             }
         </div>
     )

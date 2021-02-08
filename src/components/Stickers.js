@@ -1,7 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 487.6 439.6" style="enable-background:new 0 0 487.6 439.6;" xml:space="preserve">
+import React from 'react'
+import { ReactComponent as ZebraComponent } from './assets/Zebra.svg';
+export class Zebra{
+    constructor(name,posx,posy) {
+        this.name = name;
+        this.posx = String(posx) + "px";
+        this.posy = String(posy) + "px";
+        this.component = ZebraComponent;
+    }
+    get stickerStyle() {
+        return(
+            {
+                width: "160px", 
+                height: "160px",
+                position:"absolute",
+                left: this.posx,
+                top: this.posy,
+                
+            }
+        )
+    }
+    get sticker() {
+        return(
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 487.6 439.6" style="enable-background:new 0 0 487.6 439.6;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#000000;stroke-width:9.2625;stroke-linecap:round;stroke-linejoin:round;}
 </style>
@@ -70,3 +90,6 @@
 	s-25.2-19.9-29.6-31.8l-66.3,2.7v85.5c-19.4,11.1-41.5,6.8-51.6,0.5l-0.3-13.9c0,0-11.5,1.4-18.8-10.2v-84.1
 	c0,0-49.4-20.7-32.4-124.9c0,0-81.6,42.8-110.9,0s9.1-80.1,21.8-84.9s41.4-17.7,41.4-17.7s-25.9-34.3-7.1-48L96,50L85,26.9z"/>
 </svg>
+        )
+    }
+}
