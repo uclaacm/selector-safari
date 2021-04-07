@@ -1,95 +1,68 @@
 import React from 'react'
-import { ReactComponent as ZebraComponent } from './assets/Zebra.svg';
-export class Zebra{
-    constructor(name,posx,posy) {
+import { ZebraSVG } from './assets/Zebra.js';
+import { LeopardSVG } from './assets/Leopard.js';
+import { BoababSVG } from './assets/Boabab.js';
+import { AcaciaSVG } from './assets/Acacia.js';
+import { ElephantGrassSVG } from './assets/ElephantGrass.js';
+
+class sticker{
+    constructor(name,posx,posy,color, class_name= "animal") {
         this.name = name;
-        this.posx = String(posx) + "px";
-        this.posy = String(posy) + "px";
-        this.component = ZebraComponent;
+        this.posx = String(posx) + "%";
+        this.posy = String(posy) + "%";
+        this.component = ZebraSVG;
+        this.color = color;
+        this.class_name = class_name;
     }
     get stickerStyle() {
         return(
             {
-                width: "160px", 
-                height: "160px",
+                width: "20%", 
+                height: "20%",
                 position:"absolute",
                 left: this.posx,
-                top: this.posy,
-                
+                top: this.posy
             }
         )
     }
+}
+
+export class Zebra extends sticker{
     get sticker() {
-        return(
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 487.6 439.6" style="enable-background:new 0 0 487.6 439.6;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:9.2625;stroke-linecap:round;stroke-linejoin:round;}
-</style>
-<path class="st0" d="M380.4,419.3l-12.5-12.5l-10.7,12.5v-62.1c0,0-19-9-32.1-31.6c-11,0.8-25.1,1.5-43.4,2.4
-	c-34.3,1.6-51.8,2.3-64.4,1v90.3l-11.6-8.8l-12.6,8.8c0,0-0.2-11.2-0.4-27.1c-0.2-20-0.3-47.4,0.1-69.6
-	c-13.6-5.6-26.1-13.3-33.4-20.5c-21.5-21-20.2-57.1-19.5-77.8c0.9-26.8,7.9-44.3,0.9-48.2c-1.2-0.6-2.5-0.8-24.1,9.3
-	c-12.6,5.8-19.5,9.3-30.6,13c-2.3,0.8-4,1.3-5.4,1.8c2.2-33.3-28.7-58.7-48.9-63.9c1.3-1.9,2.8-3.8,4.4-5.5
-	c8.4-9.4,16.2-11.4,41.7-21.3C131.7,88.6,128,85.6,140,85.4c1.5,0,3.1,0,4.6,0.1c-1.2-16.7,9.2-42.5,16.7-40.8
-	c7.8,1.7,16.3,25.9,7,45.7c17.2,6.3,32.4,18.2,41.2,33c5.5,9.3,7.4,18.8,11.1,38c7.1,35.9,1.6,48.9,11.1,56.5
-	c6.4,5.1,13,2.4,24.5-0.3c7.5-1.9,15.1-3,22.8-3.4c34-1.4,64.6,12.7,83.4,31.5c6.8,6.8,15.7,16.1,17.6,30.6v8L380.4,419.3z"/>
-<path class="st0" d="M80.8,200.2c-1.5,0.5-2.6,0.8-3.8,1c-17,3.6-45.9-3.7-53.7-25c-5.9-15.8,2.8-31.7,8.6-39.9
-	C52.1,141.5,83,166.9,80.8,200.2z"/>
-<path class="st0" d="M379.9,284.3v-8C380.2,278.9,380.2,281.6,379.9,284.3z"/>
-<line class="st0" x1="217.3" y1="329.1" x2="217.3" y2="312.8"/>
-<path class="st0" d="M193.1,312.8c-0.1,3.1-0.2,6.4-0.3,9.8"/>
-<path class="st0" d="M193.1,392.5l-6.8-5.1l-11.5,12.5c0,0,0.4-55.1,0-85.2"/>
-<path class="st0" d="M325.1,325.7c-2.5-4.3-4.6-8.7-6.3-13.4"/>
-<path class="st0" d="M168.2,90.4c-0.7,1.5-1.5,2.9-2.4,4.3"/>
-<path class="st0" d="M145.6,91c-0.5-1.8-0.8-3.6-0.9-5.5"/>
-<path class="st0" d="M123.4,89.3l-20.4-54.9c0,0,76.9-35.3,128.3,10.1S255.3,222,255.3,222"/>
-<path class="st0" d="M118.8,77.1C91.8,66,80.7,61.3,80.7,61.3s-0.9,18.5,22.2,33.3"/>
-<path class="st0" d="M144.6,243.3c23.6,6.5,70.3-14,80.8-41.3l34.6-6.9"/>
-<path class="st0" d="M140.5,215.4c24,0.1,66.4-11.2,82.3-40.8l37.1-11"/>
-<path class="st0" d="M144.6,189.5c24.5-0.9,51.4-6.4,72.7-34.2l45.2-14.8"/>
-<path class="st0" d="M140.9,176.2c31-6.9,59.7-23.4,72.2-45.3l46-27.6"/>
-<path class="st0" d="M141.7,264.8c31.2,3.6,83.1-14.9,90-46.9"/>
-<path class="st0" d="M154.2,296.2c46.4-6.6,78.3-42.4,92.5-76.4"/>
-<path class="st0" d="M165.9,307.7c15.7-3.7,34.7-11.7,52.4-23.7c23.6-16,44.8-39,52.8-68.5"/>
-<path class="st0" d="M246.7,258"/>
-<path class="st0" d="M227.5,329.1c17.6-32.9,13.6-63.9,13.6-63.9"/>
-<path class="st0" d="M193.1,334.1c14,9.3,16.3,4.6,25.4,0"/>
-<path class="st0" d="M193.1,353.6c14,10.2,16.8,3.7,24.2,0"/>
-<path class="st0" d="M265.4,325.7c-15.6,21.4,43.5-43.8,35.7-110.3"/>
-<path class="st0" d="M321.9,220.7c5.6,32.9-9.2,74.4-33.3,105.1"/>
-<path class="st0" d="M345.2,232c-2.8,57.7-8.7,78.6-20.1,89"/>
-<path class="st0" d="M330.6,334.1c33-13,38-81.8,38-81.8"/>
-<path class="st0" d="M342.4,346.9c25-8.2,37.1-44.5,37.5-53.7"/>
-<path class="st0" d="M357.2,363.7c14.8,7.4,23.2-24.3,23.2-24.3"/>
-<path class="st0" d="M357.2,389.7c13-2.8,11.1-2.8,11.1-2.8l11.6-15.7"/>
-<path class="st0" d="M192.6,374.9c14.1,8.8,14.5,7.1,25.9-3.6"/>
-<path class="st0" d="M131.5,178.8c12.4-13.6,24.3-23.8,33.8-35.6c9.5-11.8,16.4-25.2,18.7-45.2l38.5-60.3"/>
-<path class="st0" d="M182.8,140.5c20.7-13.9,20.8-25.5,20.8-25.5l46.5-43.4"/>
-<line class="st0" x1="192.6" y1="24.5" x2="174.8" y2="94.7"/>
-<line class="st0" x1="165.9" y1="24.5" x2="167.1" y2="50"/>
-<line class="st0" x1="144.6" y1="24.5" x2="152" y2="53.2"/>
-<line class="st0" x1="125" y1="26.9" x2="140" y2="85.4"/>
-<path class="st0" d="M455.2,267.7c0.1-0.8,0.2-1.7,0.2-2.5c0,0-24.1-10.7-4.6-23.7C466.1,231.2,468.2,253.6,455.2,267.7
-	c-4.9,41.4-63,37.9-75.3,2.8"/>
-<path class="st0" d="M194.9,106.1c25.2-31.4,44.5-52.9,44.5-52.9"/>
-<line class="st0" x1="42.3" y1="165" x2="51.1" y2="178.8"/>
-<path class="st0" d="M118.5,92.5"/>
-<path class="st0" d="M113.8,94.7c25.7,14.4,44.9,27.7,40.4,60.9"/>
-<path class="st0" d="M174.8,334.1c10.1,7.4,17.8,8.1,17.8,8.1"/>
-<path class="st0" d="M174.8,359c7.3,6.6,18.3,5.8,18.3,5.8"/>
-<circle class="st0" cx="120.5" cy="139.1" r="4.2"/>
-<path class="st0" d="M288.7,214.2c1.9,19.9-26.6,94.1-50.4,114.9"/>
-<path class="st0" d="M305.9,326.9c1.9,3.4,4,6.7,6.3,9.9c8.5,11.5,20.2,22.4,28.2,25.2v40.2l9.3-9.2l7.6,5.8"/>
-<path class="st0" d="M445.6,342.2"/>
-<path class="st0" d="M340.4,382.8c6.9-3.3,12.8-8.5,16.8-15"/>
-<path class="st0" d="M314.2,339.5c12.4-1.6,13.4-9.6,13.4-9.6"/>
-<path class="st0" d="M325.9,352.2c10-4.2,11.6-10,11.6-10"/>
-<path class="st0" d="M340.4,362c8.5-1.9,12.5-7.1,12.5-7.1"/>
-<path class="st0" d="M85,26.9c25.2-9.7,220.9-90.3,186.1,175.1c0,0,33.9-1.4,54.8,6c20.7,7.3,53.9,20.3,66,53.5
-	c12.1,33.2,40.7,25.7,48.4,10.1c0,0-24.2-26.4,3.4-39.7c27.6-13.2,30.5,7,30.5,7s5.3,18.4-6.3,33.7c0,0-2.9,32.7-32.9,39.7
-	c-30,7.1-40.2-4.7-40.2-4.7l-2.9,115.8c-17.4,16.5-39.1,9.2-49.6,0v-9.7c0,0-15.6-2.6-14.7-11.7c0.9-9.1,0-30.9,0-30.9
-	s-25.2-19.9-29.6-31.8l-66.3,2.7v85.5c-19.4,11.1-41.5,6.8-51.6,0.5l-0.3-13.9c0,0-11.5,1.4-18.8-10.2v-84.1
-	c0,0-49.4-20.7-32.4-124.9c0,0-81.6,42.8-110.9,0s9.1-80.1,21.8-84.9s41.4-17.7,41.4-17.7s-25.9-34.3-7.1-48L96,50L85,26.9z"/>
-</svg>
+        return( 
+            <ZebraSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+        )
+    }
+}
+
+export class Leopard extends sticker{
+    get sticker() {
+        return( 
+            <LeopardSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+        )
+    }
+}
+
+export class Boabab extends sticker{
+    get sticker() {
+        return( 
+            <BoababSVG key={this.name} class_name ="plant" fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+        )
+    }
+}
+
+export class Acacia extends sticker{
+    get sticker() {
+        return( 
+            <AcaciaSVG key={this.name} class_name ="plant" fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+        )
+    }
+}
+
+export class ElephantGrass extends sticker{
+    get sticker() {
+        return( 
+            <ElephantGrassSVG key={this.name} class_name ="plant" fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
