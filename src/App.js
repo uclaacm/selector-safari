@@ -12,7 +12,7 @@ function applyStyles(cssString) {
 }
 
 function App() {
-  const [animalColors, setAnimalColors] = useState(null);
+  const [animalColors, setAnimalColors] = useState(null); // used to get applied color style and apply it to SVG as fill, though we may just have user use fill instead of color
   const [solved, setSolved] = useState(false);
   const boardEl = useRef(null);
 
