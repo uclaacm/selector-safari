@@ -50,9 +50,18 @@ export let levels = [{
         new stickers.ElephantGrass('Eduardo', 10, 75, "#EAD87A"),
         new stickers.Zebra('zaira', 20, 30, "#F9F3D6"),
         new stickers.Zebra('zed', 5, 10, "#F9F3D6"),
-        new stickers.Leopard('Lily', 65, 75, "pink")
+        new stickers.Leopard("lilly", 65, 75, "pink")
     ]
 },
+{
+    level: 5,
+    title: "Descendant",
+    instructions: "Oh no! your zebras are all the same color,  the grass they want to eat is all yellow, and your leopards don’t blend in with their environment. You’ve got a lot of work cut out for you but it seems your selector 9000 only has enough juice for you to use one selector and one css property to work with.",
+    
+    gamepeices: [
+        new stickers.ElephantGrass('Ella', 65, 40, "#EAD87A"),
+    ] 
+}
 ]
 
 

@@ -66,3 +66,13 @@ export class ElephantGrass extends sticker{
         )
     }
 }
+
+export class Family extends sticker{
+    get sticker() {
+        return( 
+            <ElephantGrassSVG key={this.name} class_name ="plant" fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}>
+                <LeopardSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            </ElephantGrassSVG>
+        )
+    }
+}
