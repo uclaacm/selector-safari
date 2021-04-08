@@ -1,5 +1,5 @@
 import React from 'react'
-import * as stickers from '../Stickers.js'
+//import * as stickers from '../Stickers.js'
 
 export function ElephantGrassSVG (props){
     return(
