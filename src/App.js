@@ -3,6 +3,9 @@ import './App.css';
 import Board from './components/Board/Board.js';
 import Editor from './components/Editor/Editor.js';
 
+import Build from './components/Build.js'
+import {levels} from './components/levels.js';
+
 const solution = {selectedAnimals: ['animal2', 'animal3'], style: 'color', defaultStyleValue: 'rgb(0, 0, 0)'};
 const sticker_names = ['animal'];
 
@@ -10,6 +13,7 @@ function applyStyles(cssString) {
   const style = document.getElementsByTagName('style')[0];
   style.textContent = cssString;
 }
+
 
 function App() {
   const [animalColors, setAnimalColors] = useState(null); // used to get applied color style and apply it to SVG as fill, though we may just have user use fill instead of color
@@ -67,6 +71,9 @@ function App() {
       <Board animalColors={animalColors} setRef={setRef}/>
       <Editor onInputChange={handleInputChange}/>
       <div>{solved ? 'yay' : 'no'}</div>
+      {/* <div className="App">
+          <Build level={levels[0]} top={"0px"} left = {"500px"}/>
+      </div> */}
     </div>
   );
 }
