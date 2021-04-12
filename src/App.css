@@ -1,22 +1,23 @@
 .App {
   text-align: left;
   min-height: 100vh;
-  background-color: #F3C94F;
+  background-color: #EAD87A;
   z-index: -1;
 }
 
 .Header {
   display: flex;
   justify-content: space-between;
-  height: 183px;
+  height: 15vh;
   background-color: #8EB9D8;
+  min-width: 100%;
 }
 
 .Title {
   display: flex;
+  padding-left: 30px;
+  font-size: 10vh;
   align-items: center;
-  padding: 30px;
-  font-size: 96px;
   font-family: "Fredoka One";
   color: #36251D;
 }
@@ -29,28 +30,26 @@
   color: #36251D;
 }
 
-.TutorialButton {
+.NavButtons{
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.LevelButton {
-  width: 267px;
+.TutorialButton {
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-right: 80px;
 }
 
 .Levels {
   background-color: #36251D;
-  width: 267px;
-  height: 528px;
+  width: 200px;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   float: right;
 }
+
 
 .Levels a {
   font-size: 28px;

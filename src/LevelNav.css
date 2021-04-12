@@ -1,8 +1,16 @@
+.everything {
+    z-index: 0;
+}
 .LevelNav {
-    width: 267px;
+    z-index: 2;
+    width: 200px;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to left, #36251D 50%, #8EB9D8 50%) left bottom;
+    background-size: 200% 100%;
+    transition: all 0.3s ease-out;
 }
 
 .LevelNav p {
@@ -18,3 +26,17 @@
     margin-top: 15px;
     font-size: 50px;
 }
+
+.LevelNav.open {
+    transition: 1s;
+    background-position: right bottom;
+}
+.LevelNav.open a {
+    transition: 2s;
+    color: #8EB9D8;
+}
+
+.LevelNav.open p {
+    color: #8EB9D8;
+}
+
