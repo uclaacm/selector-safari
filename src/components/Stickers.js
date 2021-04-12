@@ -10,7 +10,6 @@ class sticker{
         this.name = name;
         this.posx = String(posx) + "%";
         this.posy = String(posy) + "%";
-        this.component = ZebraSVG;
         this.color = color;
         this.class_name = class_name;
     }
@@ -46,7 +45,7 @@ export class Leopard extends sticker{
 export class Boabab extends sticker{
     get sticker() {
         return( 
-            <BoababSVG key={this.name} class_name ="plant" fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <BoababSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
@@ -54,7 +53,7 @@ export class Boabab extends sticker{
 export class Acacia extends sticker{
     get sticker() {
         return( 
-            <AcaciaSVG key={this.name} class_name ="plant" fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <AcaciaSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
@@ -62,7 +61,7 @@ export class Acacia extends sticker{
 export class ElephantGrass extends sticker{
     get sticker() {
         return( 
-            <ElephantGrassSVG key={this.name} class_name ="plant" fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <ElephantGrassSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
@@ -70,7 +69,7 @@ export class ElephantGrass extends sticker{
 export class Family extends sticker{
     get sticker() {
         return( 
-            <ElephantGrassSVG key={this.name} class_name ="plant" fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}>
+            <ElephantGrassSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}>
                 <LeopardSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
             </ElephantGrassSVG>
         )
