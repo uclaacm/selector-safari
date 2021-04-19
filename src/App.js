@@ -6,7 +6,7 @@ import {levels} from './components/levels.js';
 function App() {
   return (
     <div className="App">
-        <Build level={levels[0]} top={"0px"} left = {"500px"}/>
+        <Build level={levels[2]} top={"0px"} left = {"500px"}/>
     </div>
   );
 }
