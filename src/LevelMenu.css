@@ -9,7 +9,7 @@ body {
 .side-drawer {
     background-color: #36251D;
     width: 200px;
-    height: 85vh;
+    height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     align-items: center;

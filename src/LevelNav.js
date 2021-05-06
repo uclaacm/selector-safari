@@ -1,5 +1,6 @@
 import React from "react"
 import './LevelNav.css';
+import {minLevel, maxLevel} from './constants/constants'
 
 import { Link } from "react-router-dom"
 import {BiChevronLeft, BiChevronRight} from "react-icons/bi"
@@ -13,38 +14,38 @@ class LevelNav extends React.Component {
     }
 
     let levelNum = this.props.levelNum;
+
     if (levelNum === undefined){
-      levelNum = 1;
+      levelNum = minLevel;
     }
 
-    let maxLevel = 4;
-    let leftButton;
-    let rightButton;
+    let prevLevelNum;
+    let nextLevelNum;
+
+    const { setLevel } = this.props
+
 
     // make sure level number doesn't go out of bounds
-    if(levelNum === 1){
-      leftButton = <a href="#/"> <Link to={`/level/${levelNum}`}> <BiChevronLeft/> </Link> </a>;
-      rightButton = <a href="#/"> <Link to={`/level/${1*levelNum+1}`}> <BiChevronRight/> </Link> </a>;
+    if(parseInt(levelNum) === minLevel){
+        prevLevelNum = levelNum;
+        nextLevelNum = 1*levelNum+1;
     }
-    else if(levelNum === maxLevel){
-      leftButton = <a href="#/"> <Link to={`/level/${levelNum-1}`}> <BiChevronLeft/> </Link> </a>;
-      rightButton = <a href="#/"> <Link to={`/level/${1*levelNum}`}> <BiChevronRight/> </Link> </a>;
+    else if(parseInt(levelNum) === maxLevel){
+        prevLevelNum = levelNum-1;
+        nextLevelNum = 1*levelNum;
     }
     else {
-      leftButton = <a href="#/"> <Link to={`/level/${levelNum - 1}`}> <BiChevronLeft/> </Link> </a>;
-      rightButton = <a href="#/"> <Link to={`/level/${1*levelNum + 1}`}> <BiChevronRight/> </Link> </a>;
+        prevLevelNum = levelNum-1;
+        nextLevelNum = 1*levelNum+1;
     }
 
     return (
-        <div className="everything">
-          <div className={navClass}>
-            {leftButton}
-            <p onClick={this.props.toggle}>
-              {`Level ${levelNum}`}
-            </p>
-            {rightButton}
-          </div>
-
+        <div className={navClass}>
+            <Link to={`/level/${prevLevelNum}`} onClick={()=>setLevel(prevLevelNum)}> <BiChevronLeft/> </Link>
+                <p onClick={this.props.toggle}>
+                    {`Level ${levelNum}`}
+                </p>
+            <Link to={`/level/${nextLevelNum}`} onClick={()=>setLevel(nextLevelNum)}> <BiChevronRight/> </Link>
         </div>
     )
   }

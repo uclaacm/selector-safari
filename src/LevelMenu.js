@@ -10,25 +10,26 @@ class LevelMenu extends React.Component {
             drawerClasses = 'side-drawer open'
         }
 
+        const { setLevel } = this.props
+
         return (
             <div className={drawerClasses}>
                 <p>
-                    <Link to="/level/1"> Level 1 </Link>
+                    <Link to="/level/1" onClick={()=>setLevel(1)}> Level 1 </Link>
                 </p>
                 <p>
-                    <Link to="/level/2"> Level 2 </Link>
+                    <Link to="/level/2" onClick={()=>setLevel(2)}> Level 2 </Link>
                 </p>
                 <p>
-                    <Link to="/level/3"> Level 3 </Link>
+                    <Link to="/level/3" onClick={()=>setLevel(3)}> Level 3 </Link>
                 </p>
                 <p>
-                    <Link to="/level/4"> Level 4 </Link>
+                    <Link to="/level/4" onClick={()=>setLevel(4)}> Level 4 </Link>
                 </p>
             </div>
         )
     }
 }
-
 
 export default LevelMenu;
 

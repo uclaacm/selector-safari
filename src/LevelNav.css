@@ -1,10 +1,7 @@
-.everything {
-    z-index: 0;
-}
 .LevelNav {
     z-index: 2;
     width: 200px;
-    height: 15vh;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +16,10 @@
     font-weight: bolder;
     color: #36251D;
     text-decoration: underline;
+}
+
+.LevelNav p:hover {
+    cursor: pointer;
 }
 
 .LevelNav a {
@@ -37,6 +38,7 @@
 }
 
 .LevelNav.open p {
+    transition: 2s;
     color: #8EB9D8;
 }
 

@@ -3,12 +3,13 @@
   min-height: 100vh;
   background-color: #EAD87A;
   z-index: -1;
+  overflow: hidden;
 }
 
 .Header {
   display: flex;
   justify-content: space-between;
-  height: 15vh;
+  height: 70px;
   background-color: #8EB9D8;
   min-width: 100%;
 }
@@ -16,7 +17,7 @@
 .Title {
   display: flex;
   padding-left: 30px;
-  font-size: 10vh;
+  font-size: 45px;
   align-items: center;
   font-family: "Fredoka One";
   color: #36251D;
@@ -39,21 +40,3 @@
   align-items: center;
   padding-right: 80px;
 }
-
-.Levels {
-  background-color: #36251D;
-  width: 200px;
-  height: 85vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  float: right;
-}
-
-
-.Levels a {
-  font-size: 28px;
-  font-family: "Lato";
-  color: #8EB9D8;
-}
-

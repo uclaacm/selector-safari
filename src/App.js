@@ -5,15 +5,27 @@ import LevelMenu from './LevelMenu.js'
 
 
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import {minLevel} from "./constants/constants";
 
 
 class App extends React.Component{
-  state = { open: false }
+  state = {
+      open: false,
+      levelNum: minLevel
+  }
+
   toggleOpen = () => {
     this.setState({
       open: !this.state.open
     })
   }
+
+  setLevel = (num) => {
+      this.setState({
+          levelNum: num
+      })
+  }
+
   render() {
     return (
         <BrowserRouter>
@@ -23,36 +35,23 @@ class App extends React.Component{
               <div className="NavButtons">
                 <a href="#/" className="TutorialButton"> Tutorial </a>
                 <Switch>
-                  <Route path="/level/1"
+                  <Route path="/level/:levelNum"
                          render={(props) => (
-                          <LevelNav toggle={this.toggleOpen} show={this.state.open} levelNum="1"></LevelNav>
+                          <LevelNav setLevel={this.setLevel} toggle={this.toggleOpen} show={this.state.open} levelNum={this.state.levelNum}></LevelNav>
                          )}
                   />
-                  <Route path="/level/2"
-                         render={(props) => (
-                             <LevelNav toggle={this.toggleOpen} show={this.state.open} levelNum="2"></LevelNav>
-                         )}
-                  />
-                  <Route path="/level/3"
-                         render={(props) => (
-                             <LevelNav toggle={this.toggleOpen} show={this.state.open} levelNum="3"></LevelNav>
-                         )}
-                  />
-                  <Route path="/level/4"
-                         render={(props) => (
-                             <LevelNav toggle={this.toggleOpen} show={this.state.open} levelNum="4"></LevelNav>
-                         )}
-                  />
+
                   <Route path="/"
                          render={(props) => (
-                             <LevelNav toggle={this.toggleOpen} show={this.state.open} levelNum="1"></LevelNav>
+                             <LevelNav setLevel={this.setLevel} toggle={this.toggleOpen} show={this.state.open} levelNum={this.state.levelNum}></LevelNav>
                              )}
                   />
+
 
                 </Switch>
               </div>
             </div>
-            <LevelMenu show={this.state.open}/>
+            <LevelMenu show={this.state.open} setLevel={this.setLevel}/>
           </div>
         </BrowserRouter>
     );
