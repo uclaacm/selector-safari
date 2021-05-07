@@ -1,7 +1,7 @@
 import * as stickers from './Stickers.js'
 
 export let levels = [{
-        level: 1,
+        level: 1, 
         title: "ID",
         instructions: "Zebras pride themselves in their unique pattern of stripes. Unfortunatly all of your sticker zebras showed up to the safari with the same pattern of stripes. Make your zebras feel unique by giving them different colors!",
         link: "https://www.nationalgeographic.com/animals/mammals/p/plains-zebra/",

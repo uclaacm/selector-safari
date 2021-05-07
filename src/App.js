@@ -22,7 +22,7 @@ function App() {
   }
 
   const check = () => {
-    var res = true;
+    var res = true; 
     let stickerStyles = {};
     let sticker_names = ["zebra", "leopard", "acacia", "boabab", "elephantgrass", "animal"]
     // start with an array of child elements/nodes to process. we start with the children of the Board div
