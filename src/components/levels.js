@@ -10,13 +10,6 @@ export let levels = [
             new stickers.Zebra('zaira', 50, 20, "#fffcf5"), 
             new stickers.Zebra('zed', 10, 50, "#fffcf5"), 
             new stickers.Zebra('zenifer', 60, 60, "#fffcf5")
-        ],
-        solution: [
-            {
-                selected: [['zaira', 'zed', 'zenifer']], //are they supposed to select all 3?
-                style: 'color',
-                value: [false, 'rgb(255, 252, 245)']
-            }
         ]
     },
     {
@@ -27,13 +20,6 @@ export let levels = [
         gamepieces: [
             new stickers.Leopard('Leonard', 10, 10, "lightblue", null),
             new stickers.Leopard('Lily', 50, 10, "pink", null),
-        ],
-        solution: [
-            {
-                selected: [['Leonard', 'Lily']],
-                style: 'color',
-                value: [true, 'rgb(243, 201, 79)']
-            }
         ]
     },
     {
@@ -51,13 +37,6 @@ export let levels = [
             new stickers.ElephantGrass('Ella', 65, 40, "#1d0b08", "plant"),
             new stickers.ElephantGrass('Eduardo', 10, 75, "#1d0b08", "plant"),
             new stickers.Zebra('zaira', 50, 50, "#fffcf5")
-        ],
-        solution: [
-            {
-                selected: [['Bob', 'Bill', 'Ace', 'Aiden', 'Alicia', 'Edward', 'Elizabeth', 'Ella', 'Eduardo']],
-                style: 'color',
-                value: [true, 'rgb(0, 128, 0)']
-            }
         ]
     },
     {
@@ -72,13 +51,6 @@ export let levels = [
             new stickers.Zebra('zaira', 20, 30, "#fffcf5"),
             new stickers.Zebra('zed', 5, 10, "#fffcf5"),
             new stickers.Leopard("lilly", 65, 75, "pink")
-        ],
-        solution: [
-            {
-                selected: [['Edward', 'Elizabeth', 'Ella', 'Eduardo', 'lilly'], [['zaira', 'zed'], 1]],
-                style: 'color',
-                value: [true, 'rgb(0, 128, 0)']
-            }
         ]
     },
     {
