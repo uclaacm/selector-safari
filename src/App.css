@@ -1,7 +1,13 @@
+:root {
+    --main-bg-color: #EAD87A;
+    --header-bg-color: #8EB9D8;
+    --menu-bg-color: #36251D;
+}
+
 .App {
   text-align: left;
   min-height: 100vh;
-  background-color: #EAD87A;
+  background-color: var(--main-bg-color);
   z-index: -1;
   overflow: hidden;
 }
@@ -10,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   height: 70px;
-  background-color: #8EB9D8;
+  background-color: var(--header-bg-color);
   min-width: 100%;
 }
 
@@ -20,7 +26,7 @@
   font-size: 45px;
   align-items: center;
   font-family: "Fredoka One";
-  color: #36251D;
+  color: var(--menu-bg-color);
 }
 
 .Header a {
@@ -28,7 +34,7 @@
   font-size: 28px;
   font-weight: bolder;
   text-decoration: underline;
-  color: #36251D;
+  color: var(--menu-bg-color);
 }
 
 .NavButtons{

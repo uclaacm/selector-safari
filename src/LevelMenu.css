@@ -7,7 +7,7 @@ body {
     height: 100% ;
 }
 .side-drawer {
-    background-color: #36251D;
+    background-color: var(--menu-bg-color);
     width: 200px;
     height: calc(100vh - 70px);
     display: flex;
@@ -21,7 +21,7 @@ body {
 .side-drawer a {
     font-size: 28px;
     font-family: "Lato";
-    color: #8EB9D8;
+    color: var(--header-bg-color);
 }
 .side-drawer.open {
     transition: 1s;

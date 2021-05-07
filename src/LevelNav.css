@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, #36251D 50%, #8EB9D8 50%) left bottom;
+    background: linear-gradient(to left, var(--menu-bg-color) 50%, var(--header-bg-color) 50%) left bottom;
     background-size: 200% 100%;
     transition: all 0.3s ease-out;
 }
@@ -14,7 +14,7 @@
     font-size: 28px;
     font-family: "Lato";
     font-weight: bolder;
-    color: #36251D;
+    color: var(--menu-bg-color);
     text-decoration: underline;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .LevelNav a {
-    color: #36251D;
+    color: var(--menu-bg-color);
     margin-top: 15px;
     font-size: 50px;
 }
@@ -34,11 +34,11 @@
 }
 .LevelNav.open a {
     transition: 2s;
-    color: #8EB9D8;
+    color: var(--header-bg-color);
 }
 
 .LevelNav.open p {
     transition: 2s;
-    color: #8EB9D8;
+    color: var(--header-bg-color);
 }
 
