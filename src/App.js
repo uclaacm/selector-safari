@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import LevelNav from './LevelNav.js'
 import LevelMenu from './LevelMenu.js'
-
+import Build from './components/Build.js'
+import Textbox from './components/Textbox'
 
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import {minLevel} from "./constants/constants";
@@ -57,5 +58,7 @@ class App extends React.Component{
     );
   }
 }
+        // <Build level={levels[0]} top={"0px"} left = {"500px"}/>
+   
 
 export default App;

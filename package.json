@@ -15,7 +15,11 @@
     "react-overlays": "^4.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
-    "typeface-fredoka-one": "^1.1.13"
+    "typeface-fredoka-one": "^1.1.13",
+    "prismjs": "^1.23.0",
+    "react-simple-code-editor": "^0.11.0",
+    "styled-components": "^5.2.3",
+    "typescript": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
