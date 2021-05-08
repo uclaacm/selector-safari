@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Textbox from './components/Textbox.js';
+// import Textbox from './components/Textbox.js';
 import Build from './components/Build.js'
 import {levels} from './components/levels.js';
 
