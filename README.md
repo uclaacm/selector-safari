@@ -10,7 +10,7 @@ Selector Safari is a WIP game for learning CSS selectors!
 
 Selector Safari is made by Drew, Nandana, Kevin, Janis, Nhi, and Lisha from the Teach LA Dev team.
 
-This project is the brainchild of [Matt](https://github.com/malsf21) and is inspired by [Flexbox Froggy](https://flexboxfroggy.com/), [Grid Garden](https://cssgridgarden.com/), and [Flexbox Defense](http://www.flexboxdefense.com/). It uses [React](https://reactjs.org/). We promise it will be playable soon :)
+This project is the brainchild of [Matt](https://github.com/mattxwang) and is inspired by [Flexbox Froggy](https://flexboxfroggy.com/), [Grid Garden](https://cssgridgarden.com/), and [Flexbox Defense](http://www.flexboxdefense.com/). It uses [React](https://reactjs.org/). We promise it will be playable soon :)
 
 ## Development Setup
 
