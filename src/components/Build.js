@@ -10,7 +10,7 @@ export default function Build (props){
         top: props.top,
     }
     return (
-        <div id = "Board" style = {boardStyle}>
+        <div id = "Board" style = {boardStyle} ref={props.setRef}>
             {
                 props.level.gamepieces.map((z)=>{
                     return(

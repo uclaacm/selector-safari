@@ -10,8 +10,6 @@ class LevelMenu extends React.Component {
             drawerClasses = 'side-drawer open'
         }
 
-        // const { setLevel } = this.props
-
         return (
             <div className={drawerClasses}>
                 <p>
