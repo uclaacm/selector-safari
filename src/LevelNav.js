@@ -13,7 +13,7 @@ class LevelNav extends React.Component {
        navClass = 'LevelNav open'
     }
 
-    let levelNum = this.props.levelNum;
+    let levelNum = this.props.match.params.levelNum;
 
     if (levelNum === undefined){
       levelNum = minLevel;
@@ -22,7 +22,7 @@ class LevelNav extends React.Component {
     let prevLevelNum;
     let nextLevelNum;
 
-    const { setLevel } = this.props
+    // const { setLevel } = this.props
 
 
     // make sure level number doesn't go out of bounds
@@ -41,11 +41,11 @@ class LevelNav extends React.Component {
 
     return (
         <div className={navClass}>
-            <Link to={`/level/${prevLevelNum}`} onClick={()=>setLevel(prevLevelNum)}> <BiChevronLeft/> </Link>
+            <Link to={`/level/${prevLevelNum}`}> <BiChevronLeft/> </Link>
                 <p onClick={this.props.toggle}>
                     {`Level ${levelNum}`}
                 </p>
-            <Link to={`/level/${nextLevelNum}`} onClick={()=>setLevel(nextLevelNum)}> <BiChevronRight/> </Link>
+            <Link to={`/level/${nextLevelNum}`}> <BiChevronRight/> </Link>
         </div>
     )
   }

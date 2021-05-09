@@ -46,3 +46,18 @@
   align-items: center;
   padding-right: 80px;
 }
+
+.columns {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.Description {
+  background-color: var(--menu-bg-color);
+  color: var(--header-bg-color);
+  font-family: "Lato";
+}

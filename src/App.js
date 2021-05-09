@@ -5,26 +5,18 @@ import LevelMenu from './LevelMenu.js'
 import Build from './components/Build.js'
 import Textbox from './components/Textbox'
 
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import {minLevel} from "./constants/constants";
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
 
 class App extends React.Component{
   state = {
       open: false,
-      levelNum: minLevel
   }
 
   toggleOpen = () => {
     this.setState({
       open: !this.state.open
     })
-  }
-
-  setLevel = (num) => {
-      this.setState({
-          levelNum: num
-      })
   }
 
   render() {
@@ -37,28 +29,33 @@ class App extends React.Component{
                 <a href="#/" className="TutorialButton"> Tutorial </a>
                 <Switch>
                   <Route path="/level/:levelNum"
-                         render={(props) => (
-                          <LevelNav setLevel={this.setLevel} toggle={this.toggleOpen} show={this.state.open} levelNum={this.state.levelNum}></LevelNav>
-                         )}
+                    render={(props) => (
+                    <LevelNav toggle={this.toggleOpen} show={this.state.open} {...props}></LevelNav>
+                    )}
                   />
-
                   <Route path="/"
-                         render={(props) => (
-                             <LevelNav setLevel={this.setLevel} toggle={this.toggleOpen} show={this.state.open} levelNum={this.state.levelNum}></LevelNav>
-                             )}
+                    render={(props) => (
+                        <Redirect to="/level/1"/>
+                        )}
                   />
-
-
                 </Switch>
               </div>
             </div>
-            <LevelMenu show={this.state.open} setLevel={this.setLevel}/>
+            <div className="columns">
+              <div className="col">
+                <div className="Description">
+                  {}
+                </div>
+                <Textbox />
+              </div>
+              <Build level={levels[0]} top={"0px"} left={"500px"}/>
+            </div>
+            <LevelMenu show={this.state.open}/>
           </div>
         </BrowserRouter>
     );
   }
 }
-        // <Build level={levels[0]} top={"0px"} left = {"500px"}/>
    
 
 export default App;
