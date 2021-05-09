@@ -1,5 +1,4 @@
 import * as stickers from './Stickers.js'
-
 export let levels = [{
     level: 1,
     title: "ID",
@@ -59,7 +58,12 @@ export let levels = [{
     instructions: "Oh no! your zebras are all the same color,  the grass they want to eat is all yellow, and your leopards don’t blend in with their environment. You’ve got a lot of work cut out for you but it seems your selector 9000 only has enough juice for you to use one selector and one css property to work with.",
     
     gamepieces: [
-        new stickers.ElephantGrass('Ella', 65, 40, "#EAD87A", "plant"),
+        new stickers.LeopardFam("Lisa", 60, 50, "lightblue", "animal", 20),
+        new stickers.Zebra('zelly', 10, 30, "#fffcf5"),
+        new stickers.Zebra('zoob', 20, 10, "#fffcf5"),
+        new stickers.Acacia('Ace', 50, 5, "#8cb07d", "plant", 40),
+        new stickers.Acacia('Aiden', 10, 60, "#8cb07d", "plant", 40),
+
     ] 
 }
 ]
