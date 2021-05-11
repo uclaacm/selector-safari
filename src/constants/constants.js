@@ -1,2 +1,2 @@
 export const minLevel = 1;
-export const maxLevel = 4;
+export const maxLevel = 5;

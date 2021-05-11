@@ -40,47 +40,47 @@ class Family extends sticker{
 }
 
 export class Zebra extends sticker{
-    get sticker() {
+    sticker(fill) {
         return( 
-            <ZebraSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <ZebraSVG key={this.name} class_name={this.class_name} fillColor={fill} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
 
 export class Leopard extends sticker{
-    get sticker() {
+    sticker(fill) {
         return( 
-            <LeopardSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <LeopardSVG key={this.name} class_name={this.class_name} fillColor={fill} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
 
 export class Boabab extends sticker{
-    get sticker() {
+    sticker(fill) {
         return( 
-            <BoababSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <BoababSVG key={this.name} class_name ={this.class_name} fillColor={fill} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
 
 export class Acacia extends sticker{
-    get sticker() {
+    sticker(fill) {
         return( 
-            <AcaciaSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <AcaciaSVG key={this.name} class_name ={this.class_name} fillColor={fill} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
 
 export class ElephantGrass extends sticker{
-    get sticker() {
+    sticker(fill) {
         return( 
-            <ElephantGrassSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <ElephantGrassSVG key={this.name} class_name ={this.class_name} fillColor={fill} name = {this.name} stickerStyle={this.stickerStyle}/>
         )
     }
 }
 
 export class LeopardFam extends sticker{
-    get sticker() {
+    sticker(fill) {
         return( 
             <LeopardFamSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle} children = {this.children} pos = {this.pos}/>
         )

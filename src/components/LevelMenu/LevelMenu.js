@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./LevelMenu.css"
+import { maxLevel } from '../../constants/constants';
 
 class LevelMenu extends React.Component {
     render(){
@@ -12,18 +13,13 @@ class LevelMenu extends React.Component {
 
         return (
             <div className={drawerClasses}>
-                <p>
-                    <Link to="/level/1"> Level 1 </Link>
-                </p>
-                <p>
-                    <Link to="/level/2"> Level 2 </Link>
-                </p>
-                <p>
-                    <Link to="/level/3"> Level 3 </Link>
-                </p>
-                <p>
-                    <Link to="/level/4"> Level 4 </Link>
-                </p>
+                {
+                    [...Array(maxLevel)].map((_, level) => 
+                        <p>
+                            <Link to={`/level/${level+1}`}> {`Level ${level+1}`} </Link>
+                        </p>
+                    )
+                }
             </div>
         )
     }

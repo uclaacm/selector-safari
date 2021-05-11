@@ -2,7 +2,7 @@ import * as stickers from './Stickers.js'
 export let levels = [{
     level: 1,
     title: "ID",
-    instructions: "Zebras pride themselves in their unique pattern of stripes. Unfortunatly all of your sticker zebras showed up to the safari with the same pattern of stripes. Make your zebras feel unique by giving them different colors!",
+    instructions: "Zebras pride themselves in their unique pattern of stripes. Unfortunately all of your sticker zebras showed up to the safari with the same pattern of stripes. Using the ID selector and CSS color property, make your zebras feel unique by giving them different colors!",
     link: "https://www.nationalgeographic.com/animals/mammals/p/plains-zebra/",
     gamepieces: [
         new stickers.Zebra('zaira', 50, 20, "#fffcf5"), 
@@ -13,7 +13,7 @@ export let levels = [{
 {
     level: 2,
     title: "Type",
-    instructions: "Leopards are very secretive cats which means they don’t want to give away their names! Coincidentally, they also are very shy cats and want to blend into their surroundings. Help out your sticker leopards by changing their color to match their surroundings (#F3C94F)",
+    instructions: "Leopards are very secretive cats which means they don’t want to give away their names! Coincidentally, they also are very shy cats and want to blend into their surroundings. Help out your sticker leopards by changing their color to match their surroundings (#EAD87A)", //#F3C94F?
     link: "https://www.nationalgeographic.com/animals/mammals/facts/leopard",
     gamepieces: [
         new stickers.Leopard('Leonard', 10, 10, "lightblue", null),
@@ -55,7 +55,7 @@ export let levels = [{
 {
     level: 5,
     title: "Descendant",
-    instructions: "Oh no! your zebras are all the same color,  the grass they want to eat is all yellow, and your leopards don’t blend in with their environment. You’ve got a lot of work cut out for you but it seems your selector 9000 only has enough juice for you to use one selector and one css property to work with.",
+    instructions: "It looks like Lezlie the leopard has decided to adopt a baby zebra in her family. Lezlie hasn’t decided on a name for the zebra yet so it looks like they’re missing an id tag. Remember that your zebras should have unique colors so you’ll need to change the color of this zebra using the descendant selector.",
     
     gamepieces: [
         new stickers.LeopardFam("Lisa", 60, 50, "lightblue", "animal", 20),

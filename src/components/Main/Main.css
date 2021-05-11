@@ -47,6 +47,41 @@
 .Description {
     background-color: var(--menu-bg-color);
     color: var(--header-bg-color);
-    font-family: "Lato";
-    padding: 2em;
+    padding: 0 3em;
 }
+
+.instructions {
+    font-family: "Lato";
+    padding-bottom: 0.5em;
+}
+
+.level-title {
+    font-family: "Fredoka One";
+}
+
+.next {
+    margin: 0 auto;
+}
+
+.next-message {
+    display: inline-block;
+    padding-right: 1em;
+    font-family: "Lato";
+}
+
+.next-button {
+    background-color: var(--menu-bg-color);
+    color: var(--header-bg-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-family: "Fredoka One";
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.next-button:focus {
+    background-color: var(--header-bg-color);
+    color: var(--menu-bg-color);
+}
+

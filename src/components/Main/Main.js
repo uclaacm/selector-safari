@@ -1,15 +1,18 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import LevelNav from '../LevelNav/LevelNav'
 import LevelMenu from '../LevelMenu/LevelMenu'
 import Build from '../Build/Build'
 import Textbox from '../Textbox/Textbox'
 import { levels } from '../../components/levels'
+import { maxLevel } from '../../constants/constants';
 import './Main.css'
 
 class Main extends React.Component {
     state = {
         open: false,
-        stickerStyles: {}
+        stickerStyles: {},
+        solved: false,
     }
 
     setRef = (el) => {
@@ -25,6 +28,20 @@ class Main extends React.Component {
     handleValueChange = (value) => {
       this.applyStyles(value);
       let res = this.check();
+      this.setState({
+        solved: res,
+      })
+    }
+
+    handleNextClick = () => {
+      let curLevel = this.props.match.params.levelNum;
+      if (curLevel < maxLevel) {
+        this.setState({
+          solved: false
+        })
+        let nextLevel = parseInt(curLevel) + 1;
+        this.props.history.push(`/level/${nextLevel}`);
+      }
     }
   
     applyStyles = (() => {
@@ -110,6 +127,7 @@ class Main extends React.Component {
 
     render() {
         let levelNum = this.props.match.params.levelNum;
+        let curLevel = levels[levelNum - 1];
 
         return (
             <div>
@@ -128,13 +146,27 @@ class Main extends React.Component {
                 <div className="columns">
                     <div className="col">
                         <div className="Description">
-                            {levels[levelNum].instructions}
+                            {'title' in curLevel &&
+                              <h2 className="level-title">{`${curLevel.title} Selector`}</h2>
+                            }
+                            <p className="instructions">{curLevel.instructions}</p>
                         </div>
                         <Textbox onValueChange={this.handleValueChange}/>
+                        {this.state.solved &&
+                            <div className='next'>
+                              <p className='next-message'>Great job!</p>
+                              <button 
+                                className="next-button"
+                                onClick={this.handleNextClick}>
+                                  Next level
+                              </button>
+                            </div>
+                        }
                     </div>
                     <Build 
-                        level={levels[levelNum]} 
+                        level={levels[levelNum-1]} 
                         setRef={this.setRef}
+                        stickerStyles={this.state.stickerStyles}
                     />
                 </div>
             </div>
