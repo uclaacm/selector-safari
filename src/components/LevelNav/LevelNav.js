@@ -1,9 +1,8 @@
 import React from "react"
 import './LevelNav.css';
 import {minLevel, maxLevel} from '../../constants/constants'
-
 import { Link } from "react-router-dom"
-import {BiChevronLeft, BiChevronRight} from "react-icons/bi"
+import {FaAngleLeft, FaAngleRight} from "react-icons/fa"
 
 class LevelNav extends React.Component {
   render(){
@@ -38,11 +37,11 @@ class LevelNav extends React.Component {
 
     return (
         <div className={navClass}>
-            <Link to={`/level/${prevLevelNum}`}> <BiChevronLeft/> </Link>
-                <p onClick={this.props.toggle}>
+            <Link to={`/level/${prevLevelNum}`}> <FaAngleLeft/> </Link>
+                <p className="Header-link" onClick={this.props.toggle}>
                     {`Level ${levelNum}`}
                 </p>
-            <Link to={`/level/${nextLevelNum}`}> <BiChevronRight/> </Link>
+            <Link to={`/level/${nextLevelNum}`}> <FaAngleRight/> </Link>
         </div>
     )
   }

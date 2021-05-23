@@ -6,11 +6,11 @@ export function LeopardFamSVG (props){
     function childStyle(angle) {
         return(
             {
-            width: String(props.pos[2]/2) + "%",
-            height: String(props.pos[2]/2) + "%",
-            position: "absolute",
-            left: String(props.pos[0] + 17*Math.cos(angle) + props.pos[2]/4) + "%",
-            top: String(props.pos[1] - 17*Math.sin(angle) + props.pos[2]/4) + "%",
+                width: String(props.pos[2]/2) + "%",
+                height: String(props.pos[2]/2) + "%",
+                position: "absolute",
+                left: String(props.pos[0] + 17*Math.cos(angle) + props.pos[2]/4) + "%",
+                top: String(props.pos[1] - 17*Math.sin(angle) + props.pos[2]/4) + "%",
             }
         )
     }

@@ -1,11 +1,10 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
 import LevelNav from '../LevelNav/LevelNav'
 import LevelMenu from '../LevelMenu/LevelMenu'
 import Build from '../Build/Build'
 import Textbox from '../Textbox/Textbox'
 import { levels } from '../../components/levels'
-import { maxLevel } from '../../constants/constants';
+import { maxLevel, sticker_names } from '../../constants/constants';
 import './Main.css'
 
 class Main extends React.Component {
@@ -53,7 +52,6 @@ class Main extends React.Component {
     check = () => {
       let res = true; 
       let stickerStyles = {};
-      let sticker_names = ["zebra", "leopard", "acacia", "boabab", "elephantgrass", "animal"]
       // start with an array of child elements/nodes to process. we start with the children of the Build div
       let stickerNodes = Array.from(this.boardEl.children);
       let zebraColors = []; //for plant colors test to work an element will need to be added to this array
@@ -91,8 +89,10 @@ class Main extends React.Component {
       
       //Check that all leopard colors are the same as the background
       //test css: animal{color:rgb(234, 216, 122)}
+      let backgroundColor = levels[this.props.match.params.levelNum - 1].backgroundColor;
+      console.log(backgroundColor)
       for (let s = 0; s<leopardColors.length; s++) {
-        if (leopardColors[s] !== "rgb(234, 216, 122)") {
+        if (leopardColors[s] !== backgroundColor) {
           res = false;
         }
       }
@@ -107,7 +107,7 @@ class Main extends React.Component {
         }
      }
   
-     //Check that if there are zebras that all the plants are rgb(48, 98, 48)  
+     //Check that if there are zebras that all the plants are rgb(48, 98, 48)
      //To test just add an element to the zebraColors array in the beggining of the function
      //test css: .plant{color:rgb(48, 98, 48)
      if (zebraColors.length > 0) {
@@ -134,7 +134,7 @@ class Main extends React.Component {
                 <div className="Header">
                     <span className="Title"> Selector Safari </span>
                     <div className="NavButtons">
-                        <a href="#/" className="TutorialButton"> Tutorial </a>
+                        <a href="#/" className="TutorialButton Header-link"> Level Tutorial </a>
                         <LevelNav 
                             toggle={this.toggleOpen}
                             show={this.state.open} 
@@ -146,9 +146,6 @@ class Main extends React.Component {
                 <div className="columns">
                     <div className="col">
                         <div className="Description">
-                            {'title' in curLevel &&
-                              <h2 className="level-title">{`${curLevel.title} Selector`}</h2>
-                            }
                             <p className="instructions">{curLevel.instructions}</p>
                         </div>
                         <Textbox onValueChange={this.handleValueChange}/>

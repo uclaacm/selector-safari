@@ -15,10 +15,10 @@
     color: var(--menu-bg-color);
 }
 
-.Header a {
+.Header-link {
     font-family: "Lato";
-    font-size: 28px;
-    font-weight: bolder;
+    font-size: 20px;
+    font-weight: 900;
     text-decoration: underline;
     color: var(--menu-bg-color);
 }
@@ -47,16 +47,11 @@
 .Description {
     background-color: var(--menu-bg-color);
     color: var(--header-bg-color);
-    padding: 0 3em;
+    padding: 0 30px;
 }
 
 .instructions {
     font-family: "Lato";
-    padding-bottom: 0.5em;
-}
-
-.level-title {
-    font-family: "Fredoka One";
 }
 
 .next {

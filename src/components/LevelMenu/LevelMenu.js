@@ -14,9 +14,9 @@ class LevelMenu extends React.Component {
         return (
             <div className={drawerClasses}>
                 {
-                    [...Array(maxLevel)].map((_, level) => 
+                    [...Array(maxLevel)].map((_, index) => 
                         <p>
-                            <Link to={`/level/${level+1}`}> {`Level ${level+1}`} </Link>
+                            <Link to={`/level/${index+1}`} key={index}> {`Level ${index+1}`} </Link>
                         </p>
                     )
                 }

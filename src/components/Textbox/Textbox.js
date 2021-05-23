@@ -12,11 +12,10 @@ const Container = styled("div")`
     justify-content: center;
     text-align: left;
     position: relative;
-    margin: 2em auto;
+    margin: 2em 30px;
     border: 1px solid black;
     border-radius: 20px;
     padding: 25px;
-    width: 80%;
 `;
 
 function Textbox(props) {

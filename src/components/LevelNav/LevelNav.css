@@ -9,14 +9,6 @@
     transition: all 0.3s ease-out;
 }
 
-.LevelNav p {
-    font-size: 28px;
-    font-family: "Lato";
-    font-weight: bolder;
-    color: var(--menu-bg-color);
-    text-decoration: underline;
-}
-
 .LevelNav p:hover {
     cursor: pointer;
 }
