@@ -90,7 +90,9 @@ class Main extends React.Component {
       //Check that all leopard colors are the same as the background
       //test css: animal{color:rgb(234, 216, 122)}
       let backgroundColor = levels[this.props.match.params.levelNum - 1].backgroundColor;
-      console.log(backgroundColor)
+      if (backgroundColor === "default") {
+        backgroundColor = "rgb(234, 216, 122)";
+      }
       for (let s = 0; s<leopardColors.length; s++) {
         if (leopardColors[s] !== backgroundColor) {
           res = false;

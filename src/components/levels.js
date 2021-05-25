@@ -64,10 +64,10 @@ export let levels = [{
         new stickers.Leopard("Lisa", 60, 50, "lightblue", "animal", 20, [
             new stickers.Leopard("Leon", ...childPos(60, 50, 20, -0.85), "purple", "animal", childSize(20)),
             new stickers.Leopard("Lilly", ...childPos(60, 50, 20, 3.84), "pink", "animal", childSize(20)),
-            new stickers.Zebra(null, ...childPos(60, 50, 20, 4.71), "#fffcf5", "animal", childSize(20))
+            new stickers.Zebra(null, ...childPos(60, 50, 20, 4.71), "#EAD87A", "animal", childSize(20))
         ]),
-        new stickers.Zebra('zelly', 10, 30, "#fffcf5"),
-        new stickers.Zebra('zoob', 20, 10, "#fffcf5"),
+        new stickers.Zebra('zelly', 10, 30, "#EAD87A"),
+        new stickers.Zebra('zoob', 20, 10, "#EAD87A"),
         new stickers.Acacia('Ace', 50, 5, "#8cb07d", "plant", 40),
         new stickers.Acacia('Aiden', 10, 60, "#8cb07d", "plant", 40),
     ],

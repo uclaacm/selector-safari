@@ -15,7 +15,7 @@ body {
     align-items: center;
     position: absolute;
     right: -200px;
-    transition: transform 0.3s ease-out;
+    transition: right 0.3s ease-out;
     z-index: 1;
     overflow-y: scroll;
 }
@@ -26,6 +26,6 @@ body {
     color: var(--header-bg-color);
 }
 .side-drawer.open {
-    transition: 1s;
+    transition: right 1s;
     right: 0px;
 }
