@@ -4,74 +4,155 @@ import { LeopardSVG } from './assets/Leopard.js';
 import { BoababSVG } from './assets/Boabab.js';
 import { AcaciaSVG } from './assets/Acacia.js';
 import { ElephantGrassSVG } from './assets/ElephantGrass.js';
+// import { LeopardFamSVG } from './assets/LeopardFam.js';
 
 class sticker{
-    constructor(name,posx,posy,color, class_name= "animal") {
+    constructor(name, posx, posy, color, class_name="animal", size=20, children=[]) {
         this.name = name;
-        this.posx = String(posx) + "%";
-        this.posy = String(posy) + "%";
+        this.posx = posx;
+        this.posy = posy;
         this.color = color;
         this.class_name = class_name;
+        this.size = size;
+        this.children = children;
+    }
+    get pos(){
+        return([this.posx, this.posy, this.size])
     }
     get stickerStyle() {
         return(
             {
-                width: "20%", 
-                height: "20%",
+                width: String(this.size) + "%",
+                height: String(this.size) + "%",
                 position:"absolute",
-                left: this.posx,
-                top: this.posy
+                left: String(this.posx) + "%",
+                top: String(this.posy) + "%"
             }
         )
     }
 }
 
+// class Family extends sticker{
+//     constructor(children){
+//         super();
+//         this.children = children;
+//     }
+
+// }
+
 export class Zebra extends sticker{
-    get sticker() {
-        return( 
-            <ZebraSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+    sticker(stickerStyles) {
+        return(
+            <ZebraSVG 
+                key={this.name} 
+                class_name={this.class_name} 
+                defaultColor={this.color}
+                name={this.name}
+                stickerStyle={this.stickerStyle}
+                childrenStickers={this.children}
+                stickerStyles={stickerStyles}
+            />
         )
     }
 }
 
 export class Leopard extends sticker{
-    get sticker() {
+    sticker(stickerStyles) {
         return( 
-            <LeopardSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <LeopardSVG 
+                key={this.name} 
+                class_name={this.class_name} 
+                defaultColor={this.color} 
+                name={this.name} 
+                stickerStyle={this.stickerStyle} 
+                childrenStickers={this.children}
+                stickerStyles={stickerStyles}
+            />
         )
     }
 }
 
 export class Boabab extends sticker{
-    get sticker() {
+    sticker(stickerStyles) {
         return( 
-            <BoababSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <BoababSVG 
+            key={this.name} 
+            class_name ={this.class_name} 
+            defaultColor={this.color} 
+            name={this.name} 
+            stickerStyle={this.stickerStyle}
+            childrenStickers={this.children}
+            stickerStyles={stickerStyles}
+        />
         )
     }
 }
 
 export class Acacia extends sticker{
-    get sticker() {
+    sticker(stickerStyles) {
         return( 
-            <AcaciaSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <AcaciaSVG 
+                key={this.name} 
+                class_name ={this.class_name} 
+                defaultColor={this.color} 
+                name={this.name} 
+                stickerStyle={this.stickerStyle}
+                childrenStickers={this.children}
+                stickerStyles={stickerStyles}
+            />
         )
     }
 }
 
 export class ElephantGrass extends sticker{
-    get sticker() {
+    sticker(stickerStyles) {
         return( 
-            <ElephantGrassSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+            <ElephantGrassSVG 
+                key={this.name} 
+                class_name ={this.class_name} 
+                defaultColor={this.color} 
+                name={this.name} 
+                stickerStyle={this.stickerStyle}
+                childrenStickers={this.children}
+                stickerStyles={stickerStyles}
+            />
         )
     }
 }
 
-export class Family extends sticker{
-    get sticker() {
-        return( 
-            <ElephantGrassSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}>
-                <LeopardSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
-            </ElephantGrassSVG>
-        )
-    }
+// export class LeopardFam extends sticker{
+//     sticker(fill) {
+//         return( 
+//             <LeopardFamSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle} children = {this.children} pos = {this.pos}/>
+//         )
+//     }
+// }
+
+// helper functions
+
+export function childPos(parentX, parentY, parentSize, angle) {
+    return [String(parentX + 17*Math.cos(angle) + parentSize/4),
+    String(parentY - 17*Math.sin(angle) + parentSize/4)]
 }
+
+export function childSize(parentSize) {
+    return String(parentSize/2)
+}
+
+export function getStickerColor(stickerStyles, stickerName) {
+    if (stickerName in stickerStyles && stickerStyles[stickerName] !== 'rgb(0, 0, 0)') {
+        return stickerStyles[stickerName];
+    } else {
+        return null;
+    }
+} 
+
+// export class Family extends sticker{
+//     get sticker() {
+//         return( 
+//             <ElephantGrassSVG key={this.name} class_name ={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}>
+//                 <LeopardSVG key={this.name} class_name={this.class_name} fillColor={this.color} name = {this.name} stickerStyle={this.stickerStyle}/>
+//             </ElephantGrassSVG>
+//         )
+//     }
+// }

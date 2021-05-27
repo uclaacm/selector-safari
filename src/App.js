@@ -1,15 +1,31 @@
 import React from 'react';
 import './App.css';
-// import Textbox from './components/Textbox.js';
-import Build from './components/Build.js'
-import {levels} from './components/levels.js';
+import Main from './components/Main/Main';
 
-function App() {
-  return (
-    <div className="App">
-        <Build level={levels[0]} top={"0px"} left = {"500px"}/>
-    </div>
-  );
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+
+class App extends React.Component{
+
+  render() {
+    return (
+        <BrowserRouter>
+          <div className="App">
+            <Switch>
+              <Route path="/level/:levelNum"
+                render={(props) => (
+                  <Main {...props}/>
+                )}
+              />
+              <Route path="/"
+                render={(props) => (
+                  <Redirect to="/level/1"/>
+                )}
+              />
+            </Switch>
+          </div>
+        </BrowserRouter>
+    );
+  }
 }
 
 export default App;
