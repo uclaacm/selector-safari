@@ -1,0 +1,31 @@
+html {
+    height: 100%
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.side-drawer {
+    background-color: var(--menu-bg-color);
+    width: 200px;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: -200px;
+    transition: right 0.3s ease-out;
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+.side-drawer a {
+    font-size: 28px;
+    font-family: "Lato";
+    color: var(--header-bg-color);
+}
+.side-drawer.open {
+    transition: right 1s;
+    right: 0px;
+}

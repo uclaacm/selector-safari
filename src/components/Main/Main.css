@@ -1,0 +1,82 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: var(--header-bg-color);
+    min-width: 100%;
+  }
+  
+.Title {
+    display: flex;
+    padding-left: 30px;
+    font-size: 45px;
+    align-items: center;
+    font-family: "Fredoka One";
+    color: var(--menu-bg-color);
+}
+
+.Header-link {
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: underline;
+    color: var(--menu-bg-color);
+}
+
+.NavButtons{
+    display: flex;
+}
+
+.TutorialButton {
+    display: flex;
+    align-items: center;
+    padding-right: 80px;
+}
+
+.columns {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: var(--console-bg-color);
+}
+
+.Description {
+    background-color: var(--menu-bg-color);
+    color: var(--header-bg-color);
+    padding: 0 30px;
+}
+
+.instructions {
+    font-family: "Lato";
+}
+
+.next {
+    margin: 0 auto;
+}
+
+.next-message {
+    display: inline-block;
+    padding-right: 1em;
+    font-family: "Lato";
+}
+
+.next-button {
+    background-color: var(--menu-bg-color);
+    color: var(--header-bg-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-family: "Fredoka One";
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.next-button:focus {
+    background-color: var(--header-bg-color);
+    color: var(--menu-bg-color);
+}
+

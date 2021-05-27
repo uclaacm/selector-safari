@@ -1,0 +1,14 @@
+:root {
+    --main-bg-color: #EAD87A;
+    --header-bg-color: #8EB9D8;
+    --menu-bg-color: #36251D;
+    --console-bg-color: #E5AA44;
+}
+
+.App {
+  text-align: left;
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
+  position: relative;
+  overflow: hidden;
+}
