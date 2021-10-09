@@ -4,7 +4,6 @@ import { LeopardSVG } from './assets/Leopard.js';
 import { BoababSVG } from './assets/Boabab.js';
 import { AcaciaSVG } from './assets/Acacia.js';
 import { ElephantGrassSVG } from './assets/ElephantGrass.js';
-// import { LeopardFamSVG } from './assets/LeopardFam.js';
 
 class sticker{
     constructor(name, posx, posy, color, class_name="animal", size=20, children=[]) {
@@ -31,14 +30,6 @@ class sticker{
         )
     }
 }
-
-// class Family extends sticker{
-//     constructor(children){
-//         super();
-//         this.children = children;
-//     }
-
-// }
 
 export class Zebra extends sticker{
     sticker(stickerStyles) {

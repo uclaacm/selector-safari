@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Build (props){
+function Build (props){
     let backgroundColor = props.level.backgroundColor === "default" ? 
         "var(--main-bg-color)" : props.level.backgroundColor
     let boardStyle = {
@@ -23,3 +23,5 @@ export default function Build (props){
         </div>
     )
 }
+
+export default Build;
