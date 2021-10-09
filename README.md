@@ -12,6 +12,8 @@ Selector Safari is made by Drew, Nandana, Kevin, Janis, Nhi, and Lisha from the 
 
 This project is the brainchild of [Matt](https://github.com/mattxwang) and is inspired by [Flexbox Froggy](https://flexboxfroggy.com/), [Grid Garden](https://cssgridgarden.com/), and [Flexbox Defense](http://www.flexboxdefense.com/). It uses [React](https://reactjs.org/). We promise it will be playable soon :)
 
+figma: https://www.figma.com/file/Hcet8ZB9HjIx13dNu2LEnk/Wire-Frame?node-id=0%3A1
+
 ## Development Setup
 
 We'll use a really common Node.js project workflow!
