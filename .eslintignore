@@ -1,0 +1,14 @@
+webpack.*
+yarn.lock
+*.json
+*.md
+*.toml
+
+*.css
+*.scss
+*.js
+*.jsx
+
+node_modules/
+dist/
+public/

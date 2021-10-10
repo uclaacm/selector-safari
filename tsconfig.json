@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "checkJs": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "composite": true,
+    "incremental": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./custom_typing"
+    ]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "src/components/Stickers.js", "src/index.js", "src/App.js", "src/constants/constants.js", "src/components/levels.js", "src/components/Textbox/Textbox.js"]
+}

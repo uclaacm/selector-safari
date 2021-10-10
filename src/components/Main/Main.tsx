@@ -3,7 +3,7 @@ import LevelNav from '../LevelNav/LevelNav'
 import LevelMenu from '../LevelMenu/LevelMenu'
 import Build from '../Build/Build'
 import Textbox from '../Textbox/Textbox'
-import { levels } from '../../components/levels'
+import { levels } from '../levels'
 import { maxLevel, sticker_names } from '../../constants/constants';
 import './Main.css'
 

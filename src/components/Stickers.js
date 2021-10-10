@@ -5,8 +5,8 @@ import { BoababSVG } from './assets/Boabab.js';
 import { AcaciaSVG } from './assets/Acacia.js';
 import { ElephantGrassSVG } from './assets/ElephantGrass.js';
 
-class sticker{
-    constructor(name, posx, posy, color, class_name="animal", size=20, children=[]) {
+class sticker {
+    constructor(name, posx, posy, color, class_name = "animal", size = 20, children = []) {
         this.name = name;
         this.posx = posx;
         this.posy = posy;
@@ -15,15 +15,15 @@ class sticker{
         this.size = size;
         this.children = children;
     }
-    get pos(){
-        return([this.posx, this.posy, this.size])
+    get pos() {
+        return ([this.posx, this.posy, this.size])
     }
     get stickerStyle() {
-        return(
+        return (
             {
                 width: String(this.size) + "%",
                 height: String(this.size) + "%",
-                position:"absolute",
+                position: "absolute",
                 left: String(this.posx) + "%",
                 top: String(this.posy) + "%"
             }
@@ -31,12 +31,27 @@ class sticker{
     }
 }
 
-export class Zebra extends sticker{
+export class Zebra extends sticker {
     sticker(stickerStyles) {
-        return(
-            <ZebraSVG 
-                key={this.name} 
-                class_name={this.class_name} 
+        return (
+            <ZebraSVG
+                key={this.name}
+                class_name={this.class_name}
+                defaultColor={this.color}
+                name={this.name}
+                stickerStyle={this.stickerStyle}
+                childrenStickers={this.children}
+                stickerStyles={stickerStyles}
+            />
+        )
+    }
+}
+export class Leopard extends sticker {
+    sticker(stickerStyles) {
+        return (
+            <LeopardSVG
+                key={this.name}
+                class_name={this.class_name}
                 defaultColor={this.color}
                 name={this.name}
                 stickerStyle={this.stickerStyle}
@@ -47,46 +62,14 @@ export class Zebra extends sticker{
     }
 }
 
-export class Leopard extends sticker{
+export class Boabab extends sticker {
     sticker(stickerStyles) {
-        return( 
-            <LeopardSVG 
-                key={this.name} 
-                class_name={this.class_name} 
-                defaultColor={this.color} 
-                name={this.name} 
-                stickerStyle={this.stickerStyle} 
-                childrenStickers={this.children}
-                stickerStyles={stickerStyles}
-            />
-        )
-    }
-}
-
-export class Boabab extends sticker{
-    sticker(stickerStyles) {
-        return( 
-            <BoababSVG 
-            key={this.name} 
-            class_name ={this.class_name} 
-            defaultColor={this.color} 
-            name={this.name} 
-            stickerStyle={this.stickerStyle}
-            childrenStickers={this.children}
-            stickerStyles={stickerStyles}
-        />
-        )
-    }
-}
-
-export class Acacia extends sticker{
-    sticker(stickerStyles) {
-        return( 
-            <AcaciaSVG 
-                key={this.name} 
-                class_name ={this.class_name} 
-                defaultColor={this.color} 
-                name={this.name} 
+        return (
+            <BoababSVG
+                key={this.name}
+                class_name={this.class_name}
+                defaultColor={this.color}
+                name={this.name}
                 stickerStyle={this.stickerStyle}
                 childrenStickers={this.children}
                 stickerStyles={stickerStyles}
@@ -95,14 +78,30 @@ export class Acacia extends sticker{
     }
 }
 
-export class ElephantGrass extends sticker{
+export class Acacia extends sticker {
     sticker(stickerStyles) {
-        return( 
-            <ElephantGrassSVG 
-                key={this.name} 
-                class_name ={this.class_name} 
-                defaultColor={this.color} 
-                name={this.name} 
+        return (
+            <AcaciaSVG
+                key={this.name}
+                class_name={this.class_name}
+                defaultColor={this.color}
+                name={this.name}
+                stickerStyle={this.stickerStyle}
+                childrenStickers={this.children}
+                stickerStyles={stickerStyles}
+            />
+        )
+    }
+}
+
+export class ElephantGrass extends sticker {
+    sticker(stickerStyles) {
+        return (
+            <ElephantGrassSVG
+                key={this.name}
+                class_name={this.class_name}
+                defaultColor={this.color}
+                name={this.name}
                 stickerStyle={this.stickerStyle}
                 childrenStickers={this.children}
                 stickerStyles={stickerStyles}
@@ -122,12 +121,12 @@ export class ElephantGrass extends sticker{
 // helper functions
 
 export function childPos(parentX, parentY, parentSize, angle) {
-    return [String(parentX + 17*Math.cos(angle) + parentSize/4),
-    String(parentY - 17*Math.sin(angle) + parentSize/4)]
+    return [String(parentX + 17 * Math.cos(angle) + parentSize / 4),
+    String(parentY - 17 * Math.sin(angle) + parentSize / 4)]
 }
 
 export function childSize(parentSize) {
-    return String(parentSize/2)
+    return String(parentSize / 2)
 }
 
 export function getStickerColor(stickerStyles, stickerName) {
@@ -136,7 +135,7 @@ export function getStickerColor(stickerStyles, stickerName) {
     } else {
         return null;
     }
-} 
+}
 
 // export class Family extends sticker{
 //     get sticker() {
