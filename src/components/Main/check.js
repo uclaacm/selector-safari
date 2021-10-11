@@ -19,7 +19,6 @@ const check = (boardEl, setStickerStyles, backgroundColor) => {
   while (stickerNodes.length > 0) {
     let curNode = stickerNodes.shift();
     let stickerColor = window.getComputedStyle(curNode).getPropertyValue('color');
-    stickerStyles[curNode.id] = stickerColor;
     if (curNode.tagName === "ZEBRA") {
       zebraColors.push(stickerColor);
     }
@@ -29,6 +28,9 @@ const check = (boardEl, setStickerStyles, backgroundColor) => {
     else if (curNode.className === "plant"){
       plantColors.push(stickerColor);
     }
+    stickerStyles[curNode.id] = stickerColor;
+    setStickerStyles(stickerStyles);
+    if (curNode.id === "zed") console.log(`zed: ${stickerColor}`)
 
     Array.from(curNode.children).forEach((child) => {
       // ignore elements that aren't stickers (e.g. <svg>)
@@ -37,8 +39,6 @@ const check = (boardEl, setStickerStyles, backgroundColor) => {
       }
     });
   }
-
-  setStickerStyles(stickerStyles);
   return checkZebras(zebraColors) && checkLeopards(leopardColors, backgroundColor) && checkPlants(plantColors);
 }
 

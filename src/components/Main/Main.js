@@ -8,6 +8,12 @@ import { maxLevel } from '../../constants/constants';
 import './Main.css'
 import check from './check';
 
+const applyStyles = (() => {
+  const style = document.createElement('style');
+  document.head.append(style);
+  return cssString => style.textContent = cssString;
+})();
+
 function Main(props) {
   const [ open, setOpen ] = useState(false);
   const [ solved, setSolved ] = useState(false);
@@ -30,6 +36,7 @@ function Main(props) {
     applyStyles(value);
     let res = check(boardEl.current, setStickerStyles, getBackgroundColor());
     setSolved(res);
+    console.log(stickerStyles)
   }
 
   const handleNextClick = () => {
@@ -40,12 +47,6 @@ function Main(props) {
       props.history.push(`/level/${nextLevel}`);
     }
   }
-
-  const applyStyles = (() => {
-    const style = document.createElement('style');
-    document.head.append(style);
-    return cssString => style.textContent = cssString;
-  })();
 
   let levelNum = props.match.params.levelNum;
   let curLevel = levels[levelNum - 1];
