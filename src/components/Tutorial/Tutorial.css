@@ -5,11 +5,8 @@
     color: var(--menu-bg-color);
 }
 
-.line-break {
-    flex-basis: 100%;
-}
-
 .tutorial-container {
+    flex-basis: 100%;
     padding: 30px 80px 80px 30px;
     white-space: break-spaces;
 }

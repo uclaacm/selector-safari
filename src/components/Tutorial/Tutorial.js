@@ -7,15 +7,12 @@ const Tutorial = ({
         tutorialText,
     },
 }) => (
-    <React.Fragment>
-        <div className="line-break" />
-        <div className="tutorial-container">
-            <span className="subtitle"> {`${title} Selector Tutorial`} </span>
-            <div className="tutorial-text">
-                {tutorialText}
-            </div>
+    <div className="tutorial-container">
+        <span className="subtitle"> {`${title} Selector Tutorial`} </span>
+        <div className="tutorial-text">
+            {tutorialText}
         </div>
-    </React.Fragment>
+    </div>
 );
 
 export default Tutorial;
