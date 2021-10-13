@@ -36,7 +36,6 @@ function Main(props) {
     applyStyles(value);
     let res = check(boardEl.current, setStickerStyles, getBackgroundColor());
     setSolved(res);
-    console.log(stickerStyles)
   }
 
   const handleNextClick = () => {

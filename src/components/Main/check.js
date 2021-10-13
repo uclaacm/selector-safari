@@ -30,7 +30,6 @@ const check = (boardEl, setStickerStyles, backgroundColor) => {
     }
     stickerStyles[curNode.id] = stickerColor;
     setStickerStyles(stickerStyles);
-    if (curNode.id === "zed") console.log(`zed: ${stickerColor}`)
 
     Array.from(curNode.children).forEach((child) => {
       // ignore elements that aren't stickers (e.g. <svg>)
