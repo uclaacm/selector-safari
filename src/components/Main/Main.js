@@ -1,17 +1,19 @@
 import React from 'react';
-import LevelNav from '../LevelNav/LevelNav'
-import LevelMenu from '../LevelMenu/LevelMenu'
-import Build from '../Build/Build'
-import Textbox from '../Textbox/Textbox'
-import { levels } from '../../components/levels'
+import LevelNav from '../LevelNav/LevelNav';
+import LevelMenu from '../LevelMenu/LevelMenu';
+import Build from '../Build/Build';
+import Textbox from '../Textbox/Textbox';
+import Tutorial from '../Tutorial/Tutorial';
+import { levels } from '../../components/levels';
 import { maxLevel, sticker_names } from '../../constants/constants';
-import './Main.css'
+import './Main.css';
 
 class Main extends React.Component {
     state = {
         open: false,
         stickerStyles: {},
         solved: false,
+        showTutorial: false,
     }
 
     setRef = (el) => {
@@ -136,13 +138,22 @@ class Main extends React.Component {
                 <div className="Header">
                     <span className="Title"> Selector Safari </span>
                     <div className="NavButtons">
-                        <a href="#/" className="TutorialButton Header-link"> Level Tutorial </a>
+                        <a
+                          href="#/"
+                          className="TutorialButton Header-link"
+                          onClick={() => {
+                            this.setState({ showTutorial: !this.state.showTutorial })
+                          }}
+                        >
+                          Level Tutorial
+                        </a>
                         <LevelNav 
                             toggle={this.toggleOpen}
                             show={this.state.open} 
                             levelNum={this.props.match.params.levelNum}
                         />
                     </div>
+                    {this.state.showTutorial && <Tutorial level={curLevel}/>}
                 </div>
                 <LevelMenu show={this.state.open}/>
                 <div className="columns">

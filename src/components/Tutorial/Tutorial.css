@@ -1,0 +1,19 @@
+.subtitle {
+    font-size: 35px;
+    align-items: center;
+    font-family: "Fredoka One";
+    color: var(--menu-bg-color);
+}
+
+.line-break {
+    flex-basis: 100%;
+}
+
+.tutorial-container {
+    padding: 30px 80px 80px 30px;
+    white-space: break-spaces;
+}
+
+.tutorial-container .tutorial-text {
+    margin-top: 20px;
+}
