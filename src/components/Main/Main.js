@@ -3,6 +3,7 @@ import LevelNav from '../LevelNav/LevelNav'
 import LevelMenu from '../LevelMenu/LevelMenu'
 import Build from '../Build/Build'
 import Textbox from '../Textbox/Textbox'
+import Tutorial from '../Tutorial/Tutorial';
 import { levels } from '../../components/levels'
 import { maxLevel } from '../../constants/constants';
 import './Main.css'
@@ -18,6 +19,7 @@ function Main(props) {
   const [ open, setOpen ] = useState(false);
   const [ solved, setSolved ] = useState(false);
   const [ stickerStyles, setStickerStyles ] = useState({});
+  const [ showTutorial, setShowTutorial ] = useState(false);
   const boardEl = useRef(null);
 
   const setBoardRef = (el) => {
@@ -52,17 +54,26 @@ function Main(props) {
   return (
     <div>
         <div className="Header">
-            <span className="Title"> Selector Safari </span>
-            <div className="NavButtons">
-                <a href="#/" className="TutorialButton Header-link"> Level Tutorial </a>
-                <LevelNav 
-                    toggle={() => setOpen(!open)}
-                    show={open} 
-                    levelNum={props.match.params.levelNum}
-                />
-            </div>
+          <span className="Title"> Selector Safari </span>
+          <div className="NavButtons">
+            <a
+              href="#/"
+              className="TutorialButton Header-link"
+              onClick={() => {
+                setShowTutorial(!showTutorial);
+              }}
+            >
+              Level Tutorial
+            </a>
+            <LevelNav 
+                toggle={() => setOpen(!open)}
+                show={open} 
+                levelNum={props.match.params.levelNum}
+            />
+          </div>
         </div>
         <LevelMenu show={open}/>
+        {showTutorial && <Tutorial level={curLevel}/>}
         <div className="columns">
             <div className="col">
                 <div className="Description">
