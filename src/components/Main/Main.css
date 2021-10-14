@@ -1,9 +1,9 @@
 .Header {
     display: flex;
     justify-content: space-between;
-    height: 70px;
     background-color: var(--header-bg-color);
     min-width: 100%;
+    flex-wrap: wrap;
   }
   
 .Title {
