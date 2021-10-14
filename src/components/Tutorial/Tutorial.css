@@ -6,9 +6,11 @@
 }
 
 .tutorial-container {
-    flex-basis: 100%;
-    padding: 30px 80px 80px 30px;
+    background-color: var(--header-bg-color);
+    box-sizing: border-box;
+    padding: 30px 280px 80px 30px;
     white-space: break-spaces;
+    width: 100%;
 }
 
 .tutorial-container .tutorial-text {

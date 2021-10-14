@@ -153,9 +153,9 @@ class Main extends React.Component {
                             levelNum={this.props.match.params.levelNum}
                         />
                     </div>
-                    {this.state.showTutorial && <Tutorial level={curLevel}/>}
                 </div>
                 <LevelMenu show={this.state.open}/>
+                {this.state.showTutorial && <Tutorial level={curLevel}/>}
                 <div className="columns">
                     <div className="col">
                         <div className="Description">
