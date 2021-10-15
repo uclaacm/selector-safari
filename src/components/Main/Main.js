@@ -34,8 +34,8 @@ function Main(props) {
     return backgroundColor;
   }
 
-  const handleValueChange = (value) => {
-    applyStyles(value);
+  const handleInputChange = (input) => {
+    applyStyles(input);
     let res = check(boardEl.current, setStickerStyles, getBackgroundColor());
     setSolved(res);
   }
@@ -79,7 +79,7 @@ function Main(props) {
                 <div className="Description">
                     <p className="instructions">{curLevel.instructions}</p>
                 </div>
-                <Textbox onValueChange={handleValueChange}/>
+                <Textbox onValueChange={handleInputChange}/>
                 {solved &&
                     <div className='next'>
                       <p className='next-message'>Great job!</p>
