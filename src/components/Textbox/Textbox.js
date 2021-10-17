@@ -19,7 +19,6 @@ const Container = styled("div")`
 `;
 
 function Textbox(props) {
-  console.log("rerendered");
   const [code, setCode] = useState(
     localStorage.getItem(`level-${props.level}-code`) ?? `/* Type code here */`
   );

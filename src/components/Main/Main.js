@@ -136,8 +136,6 @@ class Main extends React.Component {
     let levelNum = this.props.match.params.levelNum;
     let curLevel = levels[levelNum - 1];
 
-    console.log(this.props.match.params.levelNum);
-
     return (
       <div>
         <div className="Header">
@@ -167,7 +165,7 @@ class Main extends React.Component {
               <p className="instructions">{curLevel.instructions}</p>
             </div>
             <Textbox
-              level={this.props.match.params.levelNum}
+              level={levelNum}
               onValueChange={this.handleValueChange}
               key={levelNum}
             />
