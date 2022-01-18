@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
 import Main from './components/Main/Main';
-import LevelNav from "./components/LevelNav/LevelNav";
 
-import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 import { maxLevel } from './constants/constants';
 
-function App(props) {
+function App() {
     return (
       <BrowserRouter>
         <div className="App">
