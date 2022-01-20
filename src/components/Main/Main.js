@@ -169,15 +169,7 @@ class Main extends React.Component {
               level={levelNum}
               onValueChange={this.handleValueChange}
               key={levelNum}
-            />
-            {/*
-            <Textbox
-              level={levelNum}
-              onValueChange={this.handleValueChange}
-              key={levelNum}
-            />
-            */}
-            
+            />            
             {this.state.solved && (
               <div className="next">
                 <p className="next-message">Great job!</p>

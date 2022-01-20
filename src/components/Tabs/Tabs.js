@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import "./Tabs.css";
 import Textbox from "../Textbox/Textbox";
+import { levels } from "../../components/levels";
 
-
+// TODO: change tagList to props. tabList
 function Tabs(props) {
     const [currentTab, setCurrentTab] = useState("tab1");
 
@@ -28,52 +29,23 @@ function Tabs(props) {
     ]
 
     return (
-        <div className="tabs"> 
-            {
-                tabList.map((tab) => (
+        <div className={(currentTab === 'tab1') ? 'CSS-active-background' : 'HTML-active-background'}>
+            <div className="tabs"> 
+                {tabList.map((tab) => (
                     <button
                         onClick={() => setCurrentTab(tab.name)}
-                        className={(tab.name === currentTab) ? "active" : ""}
+                        className={(tab.name === {currentTab}) ? "active-button" : "unactive-button"}
                         >
                             {tab.label}
                     </button>
-                ))
-            }
-
-            {
-                tabList.map((tab) => 
-                    {if (tab.name === currentTab) {
-                        return (
-                            tab.content
-                        )
-                    } else {
-                        return (
-                            null
-                        )
-                    }
-                } 
-                )
-            }
-
-            {() => {
-                switch (currentTab) {
-                    case 'tab1': 
-                        return (
-                            <Textbox
-                            level={props.level}
-                            onValueChange={props.onValueChange}
-                            key={props.key}
-                            />
-                        )
-                    case 'tab2':
-                        return (
-                            <p>Hello!</p>
-                        )
-                }
-            }
-            }
-
-
+                ))}
+            </div>
+                {tabList.map((tab) => 
+                {if (tab.name === currentTab) 
+                    return tab.content;
+                else 
+                    return null;
+                })}
         </div>
     )
 }

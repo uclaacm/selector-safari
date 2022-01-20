@@ -1,0 +1,24 @@
+.CSS-active-background {
+  background-color: #e5aa44;
+}
+
+.HTML-active-background {
+  background-color: #aca47e;
+}
+
+.tabs {
+  color: blue;
+  padding: 5px;
+}
+
+.active-button {
+  background-color: #e5aa44;
+  font-size: 28px;
+  font-family: "Lato";
+}
+
+.unactive-button {
+  background-color: #aca47e;
+  font-size: 28px;
+  font-family: "Lato";
+}
