@@ -2,14 +2,15 @@ import React from 'react';
 import './App.css';
 import Main from './components/Main/Main';
 
-import { Route, BrowserRouter, Redirect } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import { maxLevel } from './constants/constants';
 
 function App() {
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Route path="/level/:levelNum"
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Switch> 
+        <Route path="/level/:levelNum"
             render={(props) => {
               const currLevel = props.match.params.levelNum;
               if(currLevel > maxLevel || currLevel < 1){
@@ -19,10 +20,17 @@ function App() {
                 return <Main {...props}/>
               }
             }}
-          />      
-        </div>
-      </BrowserRouter>
-    );
+          /> 
+          <Route path="/"
+            render={() => (
+              <Redirect to="/level/1" />
+            )}
+          />
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
+
 }
 
 export default App;
