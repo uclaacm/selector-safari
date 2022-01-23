@@ -64,7 +64,7 @@
     font-family: "Lato";
 }
 
-.next-button {
+.next-button, .level-tutorial-button {
     background-color: var(--menu-bg-color);
     color: var(--header-bg-color);
     border: none;
