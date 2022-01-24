@@ -1,6 +1,6 @@
 import * as stickers from './Stickers.js';
 import { childPos, childSize } from './Stickers.js';
-import React, { Component }  from 'react';
+import React  from 'react';
 
 export let levels = [{
     level: 1,
