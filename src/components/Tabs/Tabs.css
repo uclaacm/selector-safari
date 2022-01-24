@@ -1,24 +1,33 @@
-.CSS-active-background {
+.tab-container {
   background-color: #e5aa44;
+  height: 100%;
 }
 
-.HTML-active-background {
-  background-color: #aca47e;
-}
-
-.tabs {
-  color: blue;
-  padding: 5px;
+.button-container {
+  height: 5%;
+  background-color: #36251d;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .active-button {
   background-color: #e5aa44;
-  font-size: 28px;
+  font-size: 20px;
   font-family: "Lato";
+  border: none;
+  width: 20%;
 }
 
 .unactive-button {
-  background-color: #aca47e;
-  font-size: 28px;
+  background-color: #ead87a;
+  font-size: 20px;
   font-family: "Lato";
+  border: none;
+  width: 20%;
+}
+
+.HTML-text {
+  padding-left: 30px;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
 }
