@@ -2,14 +2,20 @@ import * as stickers from './Stickers.js';
 import { childPos, childSize } from './Stickers.js';
 import React from 'react';
 
-class Hex extends React.Component{
-    render(){
-        return (
-            <span>
-                <text onClick={() => {navigator.clipboard.writeText(this.props.hexcode)}} style={{color:this.props.hexcode}}>({this.props.hexcode})</text>
-            </span>
-        );
+function Hex(props){
+    function hoverFocus(e){
+        e.target.style.background = 'dodgerblue';
     }
+
+    function unfocus(e){
+        e.target.style.background = 'none';
+    }
+
+    return (
+        <span>
+            <text onMouseOver={hoverFocus} onMouseOut={unfocus} onClick={() => {navigator.clipboard.writeText(props.hexcode)}} style={{color:props.hexcode, cursor:"pointer"}}>({props.hexcode})</text>
+        </span>
+    );
 }
 
 export let levels = [{
