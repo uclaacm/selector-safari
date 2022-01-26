@@ -1,46 +1,7 @@
 import * as stickers from './Stickers.js';
 import { childPos, childSize } from './Stickers.js';
-import React, { useState, useEffect } from 'react';
-
-function Hex(props){
-    const [text, setText] = useState(props.hexcode);
-    const [textStyle, setTextStyle] = useState();
-
-    useEffect(() => {
-        if(text === "Copied!"){
-            setTextStyle({
-                opacity: 0.2,
-                transition: "all 2s"
-            });
-            setTimeout(() => {setText(props.hexcode)}, 1000);
-        }else{
-            setTextStyle({
-                opacity: 1
-            });
-            setText(props.hexcode);
-        }
-    }, [text, props.hexcode]);
-
-    function hoverFocus(e){
-        e.target.style.background = "dodgerblue";
-        setTextStyle({cursor:"pointer"});
-    }
-
-    function unfocus(e){
-        e.target.style.background = "none";
-    }
-
-    function handleClick(e){
-        navigator.clipboard.writeText(props.hexcode);
-        setText("Copied!");
-    }
-
-    return (
-        <span>
-            <text onMouseOver={hoverFocus} onMouseOut={unfocus} onClick={handleClick} style={{color:props.hexcode, ...textStyle}}>({text})</text>
-        </span>
-    );
-}
+import Hex from './Hex/Hex.js'
+import React from 'react';
 
 export let levels = [{
     level: 1,
