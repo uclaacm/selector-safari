@@ -8,7 +8,7 @@ function Hex(props) {
         if (isCopied) {
             setTextStyle({
                 opacity: 0.2,
-                transition: "all 2s"
+                transition: "all 2s",
             });
             setTimeout(() => { setIsCopied(false); }, 1000);
         } else {
@@ -19,12 +19,7 @@ function Hex(props) {
     }, [props.hexcode, isCopied]);
 
     function hoverFocus(e) {
-        e.target.style.background = "dodgerblue";
         setTextStyle({ cursor: "pointer" });
-    }
-
-    function unfocus(e) {
-        e.target.style.background = "none";
     }
 
     function handleClick(e) {
@@ -34,7 +29,7 @@ function Hex(props) {
 
     return (
         <span>
-            <text onMouseOver={hoverFocus} onMouseOut={unfocus} onClick={handleClick} style={{ color: props.hexcode, ...textStyle }}>({isCopied ? "Copied!" : props.hexcode})</text>
+            <text onMouseOver={hoverFocus} onClick={handleClick} style={{ color: props.hexcode, ...textStyle }}>({isCopied ? "Copied!" : props.hexcode})</text>
         </span>
     );
 }
