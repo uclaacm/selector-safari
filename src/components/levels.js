@@ -1,16 +1,7 @@
 import * as stickers from './Stickers.js';
 import { childPos, childSize } from './Stickers.js';
+import Hex from './Hex/Hex.js'
 import React from 'react';
-
-class Hex extends React.Component{
-    render(){
-        return (
-            <span>
-                <text onClick={() => {navigator.clipboard.writeText(this.props.hexcode)}} style={{color:this.props.hexcode}}>({this.props.hexcode})</text>
-            </span>
-        );
-    }
-}
 
 export let levels = [{
     level: 1,
