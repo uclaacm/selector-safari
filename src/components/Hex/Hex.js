@@ -10,7 +10,7 @@ function Hex(props) {
                 opacity: 0.2,
                 transition: "all 2s",
             });
-            setTimeout(() => { setIsCopied(false); }, 1000);
+            setTimeout(() => setIsCopied(false), 1000);
         } else {
             setTextStyle({
                 opacity: 1
