@@ -8,6 +8,7 @@
   background-color: #36251d;
   display: flex;
   justify-content: flex-start;
+  padding-left: 5%;
 }
 
 .active-button {
@@ -16,6 +17,11 @@
   font-family: "Lato";
   border: none;
   width: 20%;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 0 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .unactive-button {
@@ -24,10 +30,15 @@
   font-family: "Lato";
   border: none;
   width: 20%;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 0 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .HTML-text {
-  padding-left: 30px;
+  padding-left: 5%;
   font-family: "Lato", sans-serif;
   font-size: 18px;
 }

@@ -6,8 +6,7 @@ import { levels } from "../../components/levels";
 function Tabs(props) {
     const [currentTab, setCurrentTab] = useState("tab1");
 
-    console.log(props.level);
-    // definition for HTML content: 
+    console.log(props.level); 
     let htmlContent;
 
     if (props.level == 1) {
