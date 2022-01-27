@@ -5,7 +5,6 @@ function Hex(props){
     const [textStyle, setTextStyle] = useState();
 
     useEffect(() => {
-        console.log(isCopied);
         if(isCopied){
             setTextStyle({
                 opacity: 0.2,
