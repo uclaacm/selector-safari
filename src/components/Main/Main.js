@@ -4,6 +4,7 @@ import LevelMenu from "../LevelMenu/LevelMenu";
 import Build from "../Build/Build";
 import Textbox from "../Textbox/Textbox";
 import Tutorial from "../Tutorial/Tutorial";
+import Joyride from 'react-joyride';
 import { levels } from "../../components/levels";
 import { maxLevel, sticker_names } from "../../constants/constants";
 import "./Main.css";
@@ -14,6 +15,12 @@ class Main extends React.Component {
     stickerStyles: {},
     solved: false,
     showTutorial: false,
+    steps: [
+      {
+        target: ".hex-code",
+        content: "Click to copy!"
+      },
+    ],
   };
 
   setRef = (el) => {
@@ -138,6 +145,7 @@ class Main extends React.Component {
 
     return (
       <div>
+        <Joyride steps={this.state.steps}/>
         <div className="Header">
           <span className="Title"> Selector Safari </span>
           <div className="NavButtons">

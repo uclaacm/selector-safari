@@ -29,7 +29,7 @@ function Hex(props) {
 
     return (
         <span>
-            <text onMouseOver={hoverFocus} onClick={handleClick} style={{ color: props.hexcode, ...textStyle }}>({isCopied ? "Copied!" : props.hexcode})</text>
+            <text className="hex-code" onMouseOver={hoverFocus} onClick={handleClick} style={{ color: props.hexcode, ...textStyle }}>({isCopied ? "Copied!" : props.hexcode})</text>
         </span>
     );
 }
