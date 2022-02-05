@@ -6,7 +6,7 @@ import React from 'react';
 export let levels = [{
     level: 1,
     title: "ID",
-    instructions: "Zebras pride themselves in their unique pattern of stripes. Unfortunately all of your sticker zebras showed up to the safari with the same pattern of stripes. Using the ID selector and CSS color property, make your zebras feel unique by giving them different colors!",
+    instructions: "Zebras pride themselves in their unique pattern of stripes. Unfortunately, all of your sticker zebras showed up to the safari with the same pattern of stripes. Using the ID selector and CSS color property, make your zebras feel unique by giving them different colors!",
     link: "https://www.nationalgeographic.com/animals/mammals/p/plains-zebra/",
     gamepieces: [
         new stickers.Zebra('zaira', 50, 20, "#fffcf5"), 
@@ -23,7 +23,7 @@ In CSS, you can select an id by using the # symbol:
 #George {
         color: rgb(255, 0, 0);
 }
-This will turn the element George a nice bright shade of red because they’ve just eaten a chili pepper!.`,
+This will turn the element George a nice bright shade of red because they’ve just eaten a chili pepper!`,
 },
 {
     level: 2,
@@ -35,9 +35,9 @@ This will turn the element George a nice bright shade of red because they’ve j
         new stickers.Leopard('Lily', 50, 10, "pink", null),
     ],
     backgroundColor: "default",
-    tutorialText: `The Type selector allows you to select an element by its type. In selector safari the type of sticker will be its species. Generally in HTML, an elements type is the word that comes after the first “<”.
+    tutorialText: `The Type selector allows you to select an element by its type. In selector safari the type of sticker will be its species. Generally, in HTML, an elements type is the word that comes after the first “<”.
 
-For example the type of:
+For example, the type of:
 <div>George</div> is a div
 <p> desperately needs milk </p> is a p
 <Zebra/> is a Zebra
@@ -82,7 +82,7 @@ This CSS will turn all elements with the class animal turquoise!`,
 {
     level: 4,
     title: "List",
-    instructions: <p>Oh no! your zebras are all the same color,  the grass they want to eat is all yellow, and your leopards don’t blend in with their environment <Hex hexcode="#306230"/>. You’ve got a lot of work cut out for you but it seems your selector 9000 only has enough juice for you to use one selector and one css property to work with.</p>,
+    instructions: <p>Oh no! Your zebras are all the same color, the grass they want to eat is all yellow, and your leopards don’t blend in with their environment <Hex hexcode="#306230"/>. You’ve got a lot of work cut out for you but it seems your selector 9000 only has enough juice for you to use one selector and one CSS property to work with.</p>,
     gamepieces: [
         new stickers.ElephantGrass('Edward', 78, 6, "#EAD87A", "plant"),
         new stickers.ElephantGrass('Elizabeth', 50, 12, "#EAD87A", "plant"),
@@ -104,7 +104,7 @@ Will turn the element George, all elements with the class animal, and Zebras man
 {
     level: 5,
     title: "Descendant",
-    instructions: "It looks like Lezlie the leopard has decided to adopt a baby zebra in her family. Lezlie hasn’t decided on a name for the zebra yet so it looks like they’re missing an id tag. Remember that your zebras should have unique colors so you’ll need to change the color of this zebra using the descendant selector.",
+    instructions: "It looks like Lezlie the leopard has decided to adopt a baby zebra in her family. Lezlie hasn’t decided on a name for the zebra yet, so it looks like they’re missing an id tag. Remember that your zebras should have unique colors, so you’ll need to change the color of this zebra using the descendant selector.",
     gamepieces: [
         new stickers.Leopard("Lisa", 60, 50, "lightblue", "animal", 20, [
             new stickers.Leopard("Leon", ...childPos(60, 50, 20, -0.85), "purple", "animal", childSize(20)),
