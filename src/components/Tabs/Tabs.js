@@ -1,12 +1,10 @@
 import React, {useState} from "react";
 import "./Tabs.css";
 import Textbox from "../Textbox/Textbox";
-import { levels } from "../../components/levels";
 
 function Tabs(props) {
     const [currentTab, setCurrentTab] = useState("tab1");
 
-    console.log(props.level); 
     let htmlContent;
 
     if (props.level == 1) {
@@ -55,7 +53,7 @@ function Tabs(props) {
         htmlContent =
         <div className="HTML-text">
             <p>&#60;leopard id="Lisa"/&#62;</p>
-                <div>
+                <div className="children">
                     <p>&#60;leopard id="Leon"/&#62;</p>
                     <p>&#60;leopard id="Lilly"/&#62;</p>
                     <p>&#60;zebra class="animal"/&#62;</p>
@@ -84,7 +82,9 @@ function Tabs(props) {
             name: 'tab2',
             label: 'HTML',
             content: (
-                htmlContent
+                <div className='container'>
+                    {htmlContent}
+                </div>
             )
         }
     ]

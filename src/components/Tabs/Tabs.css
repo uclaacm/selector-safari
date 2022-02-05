@@ -38,7 +38,23 @@
 }
 
 .HTML-text {
-  padding-left: 5%;
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 15px;
+}
+
+.children {
+    padding-left: 5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+    margin: 2em 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 25px;
 }
