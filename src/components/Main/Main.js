@@ -145,7 +145,7 @@ class Main extends React.Component {
 
     return (
       <div>
-        <Joyride steps={this.state.steps}/>
+        <Joyride key={levelNum} steps={this.state.steps} />
         <div className="Header">
           <span className="Title"> Selector Safari </span>
           <div className="NavButtons">
