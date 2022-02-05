@@ -16,3 +16,8 @@
 .tutorial-container .tutorial-text {
     margin-top: 20px;
 }
+
+.code-text {
+    color: green;
+    font-weight: bold;
+}
