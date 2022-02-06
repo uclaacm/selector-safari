@@ -1,5 +1,8 @@
 import * as stickers from './Stickers.js';
 import { childPos, childSize } from './Stickers.js';
+import Hex from './Hex/Hex.js'
+import React from 'react';
+
 export let levels = [{
     level: 1,
     title: "ID",
@@ -25,7 +28,7 @@ This will turn the element George a nice bright shade of red because they’ve j
 {
     level: 2,
     title: "Type",
-    instructions: "Leopards are very secretive cats which means they don’t want to give away their names! Coincidentally, they also are very shy cats and want to blend into their surroundings. Help out your sticker leopards by changing their color to match their surroundings (#EAD87A)", //#F3C94F?
+    instructions: <p>Leopards are very secretive cats which means they don’t want to give away their names! Coincidentally, they also are very shy cats and want to blend into their surroundings. Help out your sticker leopards by changing their color to match their surroundings <Hex hexcode="#EAD87A"/></p>, //#F3C94F?
     link: "https://www.nationalgeographic.com/animals/mammals/facts/leopard",
     gamepieces: [
         new stickers.Leopard('Leonard', 10, 10, "lightblue", "leopard", null),
@@ -48,7 +51,7 @@ This CSS will turn all Zebras a deep shade of purple!`,
 {
     level: 3,
     title: "Class",
-    instructions: "It looks like this part of your safari has had a fire recently and your zebras have nothing to eat. Turn the safari green (#306230) again to make sure your animals are well fed.",
+    instructions: <p>It looks like this part of your safari has had a fire recently and your zebras have nothing to eat. Turn the safari green <Hex hexcode="#306230"/> again to make sure your animals are well fed.</p>,
     gamepieces: [
         new stickers.Boabab('Bob', 10, 30, "#1d0b08", "boabab", "plant"),
         new stickers.Boabab('Bill', 65, 75, "#1d0b08", "boabab", "plant"),
@@ -79,7 +82,7 @@ This CSS will turn all elements with the class animal turquoise!`,
 {
     level: 4,
     title: "List",
-    instructions: "Oh no! your zebras are all the same color,  the grass they want to eat is all yellow, and your leopards don’t blend in with their environment (#306230). You’ve got a lot of work cut out for you but it seems your selector 9000 only has enough juice for you to use one selector and one css property to work with.",
+    instructions: <p>Oh no! your zebras are all the same color,  the grass they want to eat is all yellow, and your leopards don’t blend in with their environment <Hex hexcode="#306230"/>. You’ve got a lot of work cut out for you but it seems your selector 9000 only has enough juice for you to use one selector and one css property to work with.</p>,
     gamepieces: [
         new stickers.ElephantGrass('Edward', 78, 6, "#EAD87A", "elephantgrass", "plant"),
         new stickers.ElephantGrass('Elizabeth', 50, 12, "#EAD87A", "elephantgrass", "plant"),

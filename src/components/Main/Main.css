@@ -64,15 +64,15 @@
   font-family: "Lato";
 }
 
-.next-button {
-  background-color: var(--menu-bg-color);
-  color: var(--header-bg-color);
-  border: none;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  font-family: "Fredoka One";
-  font-size: 16px;
-  cursor: pointer;
+.next-button, .level-tutorial-button {
+    background-color: var(--menu-bg-color);
+    color: var(--header-bg-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-family: "Fredoka One";
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .next-button:focus {

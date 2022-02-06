@@ -149,7 +149,7 @@ class Main extends React.Component {
                 this.setState({ showTutorial: !this.state.showTutorial });
               }}
             >
-              Level Tutorial
+              <button class="level-tutorial-button">Level Tutorial</button>
             </a>
             <LevelNav
               toggle={this.toggleOpen}
