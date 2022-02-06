@@ -18,6 +18,8 @@ class Main extends React.Component {
     steps: [
       {
         target: ".hex-code",
+        event: "hover",
+        spotlightPadding: 5,
         content: "Click to copy!"
       },
     ],
@@ -145,7 +147,20 @@ class Main extends React.Component {
 
     return (
       <div>
-        <Joyride key={levelNum} steps={this.state.steps} />
+        {(levelNum === "2") &&
+          <Joyride
+            key={levelNum}
+            steps={this.state.steps}
+            styles={{
+              tooltipContainer: {
+                margin: "0",
+                position: "absolute",
+                top: "10%",
+                left: "35%",
+              }
+            }}
+          />
+        }
         <div className="Header">
           <span className="Title"> Selector Safari </span>
           <div className="NavButtons">
