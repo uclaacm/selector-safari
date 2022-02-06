@@ -6,11 +6,12 @@ import { AcaciaSVG } from './assets/Acacia.js';
 import { ElephantGrassSVG } from './assets/ElephantGrass.js';
 
 class sticker{
-    constructor(name, posx, posy, color, class_name="animal", size=20, children=[]) {
+    constructor(name, posx, posy, color, component_name, class_name="animal", size=20, children=[]) {
         this.name = name;
         this.posx = posx;
         this.posy = posy;
         this.color = color;
+        this.component_name = component_name;
         this.class_name = class_name;
         this.size = size;
         this.children = children;

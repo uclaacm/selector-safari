@@ -1,92 +1,56 @@
 import React, {useState} from "react";
 import "./Tabs.css";
 import Textbox from "../Textbox/Textbox";
+import {levels} from "../levels.js"
 
 function Tabs(props) {
     const [currentTab, setCurrentTab] = useState("tab1");
 
-    let htmlContent;
+    /* htmlContentArray formatting: element 1 - component name, element 2 - component id, 
+    element 3 - is the component a child? */
+    let htmlContentArray = [];
 
-    if (props.level == 1) {
-        htmlContent = 
-        <div className="HTML-text">
-            <p>&#60;zebra id="zaira"/&#62;</p>
-            <p>&#60;zebra id="zed"/&#62;</p>
-            <p>&#60;zebra id="zenifer"/&#62;</p>
-        </div>
-
-    } else if (props.level == 2) {
-        htmlContent =
-        <div className="HTML-text">
-            <p>&#60;leopard id="Leonard"/&#62;</p>
-            <p>&#60;leopard id="Lily"/&#62;</p>
-        </div>
-
-    } else if (props.level == 3) {
-        htmlContent =
-        <div className="HTML-text">
-            <p>&#60;boabab id="Bob"/&#62;</p>
-            <p>&#60;boabab id="Bill"/&#62;</p>
-            <p>&#60;acacia id="Ace"/&#62;</p>
-            <p>&#60;acacia id="Aiden"/&#62;</p>
-            <p>&#60;acacia id="Alicia"/&#62;</p>
-            <p>&#60;elephentgrass id="Edward"/&#62;</p>
-            <p>&#60;elephentgrass id="Elizabeth"/&#62;</p>
-            <p>&#60;elephentgrass id="Ella"/&#62;</p>
-            <p>&#60;elephentgrass id="Eduardo"/&#62;</p>
-            <p>&#60;zebra id="zaira"/&#62;</p>
-        </div>
-
-    } else if (props.level == 4) {
-        htmlContent =
-        <div className="HTML-text">
-            <p>&#60;elephentgrass id="Edward"/&#62;</p>
-            <p>&#60;elephentgrass id="Elizabeth"/&#62;</p>
-            <p>&#60;elephentgrass id="Ella"/&#62;</p>
-            <p>&#60;elephentgrass id="Eduardo"/&#62;</p>
-            <p>&#60;zebra id="zaira"/&#62;</p>
-            <p>&#60;zebra id="zed"/&#62;</p> 
-            <p>&#60;leopard id="lilly"/&#62;</p>           
-        </div> 
-
-    } else if (props.level == 5) {
-        htmlContent =
-        <div className="HTML-text">
-            <p>&#60;leopard id="Lisa"/&#62;</p>
-                <div className="children">
-                    <p>&#60;leopard id="Leon"/&#62;</p>
-                    <p>&#60;leopard id="Lilly"/&#62;</p>
-                    <p>&#60;zebra class="animal"/&#62;</p>
-                </div>
-            <p>&#60;zebra id="zelly"/&#62;</p>
-            <p>&#60;zebra id="zoob"/&#62;</p>        
-            <p>&#60;acacia id="Ace"/&#62;</p>
-            <p>&#60;acacia id="Aiden"/&#62;</p>     
-        </div>
-
-    }
+    levels[props.level - 1].gamepieces.forEach((gamepiece) => {
+        htmlContentArray.push([gamepiece.component_name, gamepiece.name, false]);
+        if (gamepiece.children) {
+            gamepiece.children.forEach((child) => {
+                htmlContentArray.push([child.component_name, child.name, true]);
+            })}
+    });
 
     const tabList = [
         {
-            name: 'tab1',
-            label: 'CSS',
-            content: (
-                <Textbox
-                level={props.level}
-                onValueChange={props.onValueChange}
-                key={props.key}
-                />
-            )
-        },
+        name: 'tab1',
+        label: 'CSS',
+        content: (
+            <Textbox
+            level={props.level}
+            onValueChange={props.onValueChange}
+            key={props.key}
+            />
+        )},
         {
             name: 'tab2',
             label: 'HTML',
             content: (
-                <div className='container'>
-                    {htmlContent}
+            <div className='container'>
+                <div className='HTML-text'>
+                    {htmlContentArray.map((element) => {
+                        let styling;
+                        // check whether component is child or parent and applying styling accordingly
+                        if (element[2] == true)
+                            styling = 'children';
+                        else
+                            styling = 'parent';
+                        // check if current sticker has an id and set content accordingly
+                        if (element[1] == null) 
+                            return (<p className={styling}>&#60;{element[0]}/&#62;</p>);
+                        else 
+                            return (<p className={styling}>&#60;{element[0]} id="{element[1]}"/&#62;</p>);
+                    })}
                 </div>
-            )
-        }
+            </div>
+        )}
     ]
 
     return (
