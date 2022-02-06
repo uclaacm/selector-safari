@@ -38,12 +38,12 @@ function Tabs(props) {
                     {htmlContentArray.map((element) => {
                         let styling;
                         // check whether component is child or parent and applying styling accordingly
-                        if (element[2] == true)
+                        if (element[2] === true)
                             styling = 'children';
                         else
                             styling = 'parent';
                         // check if current sticker has an id and set content accordingly
-                        if (element[1] == null) 
+                        if (element[1] === null) 
                             return (<p className={styling}>&#60;{element[0]}/&#62;</p>);
                         else 
                             return (<p className={styling}>&#60;{element[0]} id="{element[1]}"/&#62;</p>);

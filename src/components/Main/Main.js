@@ -2,7 +2,6 @@ import React from "react";
 import LevelNav from "../LevelNav/LevelNav";
 import LevelMenu from "../LevelMenu/LevelMenu";
 import Build from "../Build/Build";
-import Textbox from "../Textbox/Textbox";
 import Tabs from "../Tabs/Tabs";
 import Tutorial from "../Tutorial/Tutorial";
 import { levels } from "../../components/levels";
