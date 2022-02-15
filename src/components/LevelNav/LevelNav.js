@@ -10,7 +10,7 @@ function LevelNav(props) {
   const prevLevelNum = Math.max(levelNum - 1, minLevel);
   const nextLevelNum = Math.min(levelNum + 1, maxLevel);
 
-  if (levelNum == 1)
+  if (levelNum === 1)
   {
     return (
       <div className={"LevelNav" + (props.show ? " open" : "")}>
@@ -24,7 +24,7 @@ function LevelNav(props) {
       </div>
     );
   }
-  else if (levelNum == 5)
+  else if (levelNum === 5)
   {
     return (
       <div className={"LevelNav" + (props.show ? " open" : "")}>
