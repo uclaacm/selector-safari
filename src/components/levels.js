@@ -55,7 +55,7 @@ This CSS will turn all Zebras a deep shade of purple!`,
     gamepieces: [
         new stickers.Boabab('Bob', 10, 30, "#1d0b08", "boabab", "plant"),
         new stickers.Boabab('Bill', 65, 75, "#1d0b08", "boabab", "plant"),
-        new stickers.Acacia('Ace', 10, 5, "#1d0b08", "acadia", "plant"),
+        new stickers.Acacia('Ace', 10, 5, "#1d0b08", "acacia", "plant"),
         new stickers.Acacia('Aiden', 15, 50, "#1d0b08", "acacia", "plant"),
         new stickers.Acacia('Alicia', 30, 40, "#1d0b08", "acacia", "plant"),
         new stickers.ElephantGrass('Edward', 78, 6, "#1d0b08", "elephantgrass", "plant"),
