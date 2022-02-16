@@ -11,10 +11,10 @@ function Tabs(props) {
     let htmlContentArray = [];
 
     levels[props.level - 1].gamepieces.forEach((gamepiece) => {
-        htmlContentArray.push([gamepiece.component_name, gamepiece.name, false]);
+        htmlContentArray.push([gamepiece.constructor.name, gamepiece.name, false]);
         if (gamepiece.children) {
             gamepiece.children.forEach((child) => {
-                htmlContentArray.push([child.component_name, child.name, true]);
+                htmlContentArray.push([child.constructor.name, child.name, true]);
             })}
     });
 
