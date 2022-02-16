@@ -7,6 +7,7 @@ import Tutorial from "../Tutorial/Tutorial";
 import { levels } from "../../components/levels";
 import { maxLevel, sticker_names } from "../../constants/constants";
 import "./Main.css";
+import Joyride from 'react-joyride';
 
 class Main extends React.Component {
   state = {
@@ -14,6 +15,16 @@ class Main extends React.Component {
     stickerStyles: {},
     solved: false,
     showTutorial: false,
+    steps: [
+      {
+        target: "first step",
+        content: "Level Tutorial",
+      },
+      {
+        target: "second step",
+        content: "Level Navigation Bar",
+      },
+    ],
   };
 
   setRef = (el) => {
@@ -135,6 +146,7 @@ class Main extends React.Component {
   render() {
     let levelNum = this.props.match.params.levelNum;
     let curLevel = levels[levelNum - 1];
+    const {steps} = this.state;
 
     return (
       <div>
@@ -157,6 +169,9 @@ class Main extends React.Component {
             />
           </div>
         </div>
+        <Joyride
+              steps = {steps}
+        />
         <LevelMenu show={this.state.open} />
         {this.state.showTutorial && <Tutorial level={curLevel} />}
         <div className="columns">
