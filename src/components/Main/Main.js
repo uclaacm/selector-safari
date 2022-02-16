@@ -15,14 +15,32 @@ class Main extends React.Component {
     stickerStyles: {},
     solved: false,
     showTutorial: false,
+    run: true,
     steps: [
       {
-        target: "first step",
-        content: "Level Tutorial",
+        target: ".level-tutorial-button",
+        content: "Feeling stuck? Here are some tips!",
+        disableBeacon: "true",
       },
       {
-        target: "second step",
-        content: "Level Navigation Bar",
+        target: ".Level-sidebar",
+        content: "Click here to navigate to a different level!",
+        disableBeacon: "true",
+      },
+      {
+        target: "path",
+        content: "Move on to the next level!",
+        disableBeacon: "true",
+      },
+      {
+        target: ".instructions",
+        content: "What does this level want you to accomplish?",
+        disableBeacon: "true",
+      },
+      {
+        target: ".sc-bdvvaa",
+        content: "Write your code in this editor!",
+        disableBeacon: "true",
       },
     ],
   };
@@ -148,6 +166,13 @@ class Main extends React.Component {
     let curLevel = levels[levelNum - 1];
     const {steps} = this.state;
 
+    if (this.state.run && Number(levelNum)>=2)
+    {
+      this.setState({
+        run: false
+      });
+    }
+
     return (
       <div>
         <div className="Header">
@@ -169,9 +194,6 @@ class Main extends React.Component {
             />
           </div>
         </div>
-        <Joyride
-              steps = {steps}
-        />
         <LevelMenu show={this.state.open} />
         {this.state.showTutorial && <Tutorial level={curLevel} />}
         <div className="columns">
@@ -193,6 +215,26 @@ class Main extends React.Component {
               </div>
             )}
           </div>
+          {Number(levelNum)===1 && this.state.run &&
+            <Joyride
+            steps={steps}
+            continuous={true}
+            showSkipButton={true}
+            showProgress={true}
+            disableOverlay={true}
+            styles={{
+              options: {
+                arrowColor: '#FFFFFF',
+                backgroundColor: '#FFFFFF',
+                overlayColor: '#ffffff00',
+                primaryColor: '#7AA9BF',
+                textColor: '#7AA9BF',
+                width: undefined,
+                zIndex: 100,
+              }
+            }}
+            />
+          }
           <Build
             level={levels[levelNum - 1]}
             setRef={this.setRef}
