@@ -23,7 +23,17 @@ class Main extends React.Component {
         content: "Click to copy!"
       },
     ],
+    showTooltip: true,
   };
+
+  handleTooltip = () => {
+    localStorage.setItem("showTooltip", "hex-code");
+  }
+
+  // Set up hexcode tooltip only when it's the first time the page loads
+  componentDidMount(){
+    window.addEventListener('load', this.handleTooltip);
+  }
 
   setRef = (el) => {
     this.boardEl = el;
@@ -147,20 +157,20 @@ class Main extends React.Component {
 
     return (
       <div>
-        {(levelNum === "2") &&
-          <Joyride
-            key={levelNum}
-            steps={this.state.steps}
-            styles={{
-              tooltipContainer: {
-                margin: "0",
-                position: "absolute",
-                top: "10%",
-                left: "35%",
-              }
-            }}
-          />
-        }
+        <Joyride
+          key={levelNum}
+          steps={this.state.steps}
+          styles={{
+            tooltipContainer: {
+              margin: "0",
+              position: "absolute",
+              top: "10%",
+              left: "35%",
+            }
+          }}
+          callback={() => {localStorage.setItem("showTooltip", "false")}} // After user hovers on hexcode tooltip, don't show again 
+        />
+
         <div className="Header">
           <span className="Title"> Selector Safari </span>
           <div className="NavButtons">
