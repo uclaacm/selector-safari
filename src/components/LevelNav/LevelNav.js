@@ -10,21 +10,52 @@ function LevelNav(props) {
   const prevLevelNum = Math.max(levelNum - 1, minLevel);
   const nextLevelNum = Math.min(levelNum + 1, maxLevel);
 
-  return (
-    <div className={"LevelNav" + (props.show ? " open" : "")}>
-      <Link to={`/level/${prevLevelNum}`}>
-        {" "}
-        <FaAngleLeft />{" "}
-      </Link>
-      <p className="Header-link" onClick={props.toggle}>
-        {`Level ${levelNum}`}
-      </p>
-      <Link to={`/level/${nextLevelNum}`}>
-        {" "}
-        <FaAngleRight />{" "}
-      </Link>
-    </div>
-  );
+  if (levelNum === 1)
+  {
+    return (
+      <div className={"LevelNav" + (props.show ? " open" : "")}>
+        <p className="Header-link" onClick={props.toggle}>
+          {`Level ${levelNum}`}
+        </p>
+        <Link to={`/level/${nextLevelNum}`}>
+          {" "}
+          <FaAngleRight />{" "}
+        </Link>
+      </div>
+    );
+  }
+  else if (levelNum === 5)
+  {
+    return (
+      <div className={"LevelNav" + (props.show ? " open" : "")}>
+        <Link to={`/level/${prevLevelNum}`}>
+          {" "}
+          <FaAngleLeft />{" "}
+        </Link>
+        <p className="Header-link" onClick={props.toggle}>
+          {`Level ${levelNum}`}
+        </p>
+      </div>
+    );
+  }
+  else {
+    return (
+      <div className={"LevelNav" + (props.show ? " open" : "")}>
+        <Link to={`/level/${prevLevelNum}`}>
+          {" "}
+          <FaAngleLeft />{" "}
+        </Link>
+        <p className="Header-link" onClick={props.toggle}>
+          {`Level ${levelNum}`}
+        </p>
+        <Link to={`/level/${nextLevelNum}`}>
+          {" "}
+          <FaAngleRight />{" "}
+        </Link>
+      </div>
+    );
+  }
+
 }
 
 export default LevelNav;
