@@ -15,12 +15,12 @@
   color: var(--menu-bg-color);
 }
 
-.Header-link {
-  font-family: "Lato";
-  font-size: 20px;
-  font-weight: 900;
-  text-decoration: underline;
-  color: var(--menu-bg-color);
+.Header-link, .Level-sidebar {
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: underline;
+    color: var(--menu-bg-color);
 }
 
 .NavButtons {
