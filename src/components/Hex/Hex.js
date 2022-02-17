@@ -26,7 +26,7 @@ function Hex(props) {
     }
 
     function handleClick(e) {
-        if (localStorage.getItem("showTooltip") === "false") { // don't let user copy hexcode until they hover over the tooltip first
+        if (showTooltip === "false") { // don't let user copy hexcode until they hover over the tooltip first
             navigator.clipboard.writeText(props.hexcode);
             setIsCopied(true);
         }

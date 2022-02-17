@@ -4,7 +4,7 @@ import LevelMenu from "../LevelMenu/LevelMenu";
 import Build from "../Build/Build";
 import Textbox from "../Textbox/Textbox";
 import Tutorial from "../Tutorial/Tutorial";
-import Joyride from 'react-joyride';
+import Joyride, { STATUS } from 'react-joyride';
 import { levels } from "../../components/levels";
 import { maxLevel, sticker_names } from "../../constants/constants";
 import "./Main.css";
@@ -31,8 +31,16 @@ class Main extends React.Component {
   }
 
   // Set up hexcode tooltip only when it's the first time the page loads
-  componentDidMount(){
+  componentDidMount() {
     window.addEventListener('load', this.handleTooltip);
+  }
+
+  handleHexJoyrideCallback = data => {
+    const { status } = data;
+
+    if ([STATUS.FINISHED, STATUS.SKIPPED].includes(status)) {
+      localStorage.setItem("showTooltip", "false")
+    }
   }
 
   setRef = (el) => {
@@ -168,7 +176,7 @@ class Main extends React.Component {
               left: "35%",
             }
           }}
-          callback={() => {localStorage.setItem("showTooltip", "false")}} // After user hovers on hexcode tooltip, don't show again 
+          callback={this.handleHexJoyrideCallback} // After user hovers on hexcode tooltip, don't show again 
         />
 
         <div className="Header">
