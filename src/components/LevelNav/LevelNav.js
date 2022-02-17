@@ -14,7 +14,7 @@ function LevelNav(props) {
   {
     return (
       <div className={"LevelNav" + (props.show ? " open" : "")}>
-        <p className="Header-link" onClick={props.toggle}>
+        <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
         <Link to={`/level/${nextLevelNum}`}>
@@ -32,7 +32,7 @@ function LevelNav(props) {
           {" "}
           <FaAngleLeft />{" "}
         </Link>
-        <p className="Header-link" onClick={props.toggle}>
+        <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
       </div>
@@ -45,7 +45,7 @@ function LevelNav(props) {
           {" "}
           <FaAngleLeft />{" "}
         </Link>
-        <p className="Header-link" onClick={props.toggle}>
+        <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
         <Link to={`/level/${nextLevelNum}`}>
