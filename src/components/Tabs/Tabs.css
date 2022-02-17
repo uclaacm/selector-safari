@@ -1,0 +1,60 @@
+.tab-container {
+  background-color: #e5aa44;
+  height: 100%;
+}
+
+.button-container {
+  height: 5%;
+  background-color: #36251d;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+
+.active-button {
+  background-color: #e5aa44;
+  font-size: 20px;
+  font-family: "Lato";
+  border: none;
+  width: 20%;
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 0 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.unactive-button {
+  background-color: #ead87a;
+  font-size: 20px;
+  font-family: "Lato";
+  border: none;
+  width: 20%;
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 0 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.HTML-text {
+  font-family: "Source Code Pro", monospace;
+  font-size: 15px;
+}
+
+.children {
+    padding-left: 5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+    margin: 2em 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 25px;
+}
