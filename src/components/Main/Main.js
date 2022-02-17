@@ -8,7 +8,6 @@ import Joyride, { STATUS } from 'react-joyride';
 import { levels } from "../../components/levels";
 import { maxLevel, sticker_names } from "../../constants/constants";
 import "./Main.css";
-import Joyride from 'react-joyride';
 
 class Main extends React.Component {
   state = {
@@ -191,10 +190,9 @@ class Main extends React.Component {
   render() {
     let levelNum = this.props.match.params.levelNum;
     let curLevel = levels[levelNum - 1];
-    const {steps} = this.state;
+    const { steps } = this.state;
 
-    if (this.state.run && Number(levelNum)>=2)
-    {
+    if (this.state.run && Number(levelNum) >= 2) {
       this.setState({
         run: false
       });
@@ -214,19 +212,6 @@ class Main extends React.Component {
             }
           }}
           callback={this.handleHexJoyrideCallback} // After user hovers on hexcode tooltip, don't show again 
-        />
-            
-            <Joyride
-          key={levelNum}
-          steps={this.state.steps}
-          styles={{
-            tooltipContainer: {
-              margin: "0",
-              position: "absolute",
-              top: "10%",
-              left: "35%",
-            }
-          }}
         />
 
         <div className="Header">
@@ -255,11 +240,11 @@ class Main extends React.Component {
             <div className="Description">
               <p className="instructions">{curLevel.instructions}</p>
             </div>
-            <Tabs 
+            <Tabs
               level={levelNum}
               onValueChange={this.handleValueChange}
               key={levelNum}
-            />            
+            />
             {this.state.solved && (
               <div className="next">
                 <p className="next-message">Great job!</p>
@@ -269,24 +254,24 @@ class Main extends React.Component {
               </div>
             )}
           </div>
-          {Number(levelNum)===1 && this.state.run &&
+          {Number(levelNum) === 1 && this.state.run &&
             <Joyride
-            steps={steps}
-            continuous={true}
-            showSkipButton={true}
-            showProgress={true}
-            disableOverlay={true}
-            styles={{
-              options: {
-                arrowColor: '#FFFFFF',
-                backgroundColor: '#FFFFFF',
-                overlayColor: '#ffffff00',
-                primaryColor: '#8EB9DB',
-                textColor: '#8EB9DB',
-                width: undefined,
-                zIndex: 100,
-              }
-            }}
+              steps={steps}
+              continuous={true}
+              showSkipButton={true}
+              showProgress={true}
+              disableOverlay={true}
+              styles={{
+                options: {
+                  arrowColor: '#FFFFFF',
+                  backgroundColor: '#FFFFFF',
+                  overlayColor: '#ffffff00',
+                  primaryColor: '#8EB9DB',
+                  textColor: '#8EB9DB',
+                  width: undefined,
+                  zIndex: 100,
+                }
+              }}
             />
           }
           <Build
