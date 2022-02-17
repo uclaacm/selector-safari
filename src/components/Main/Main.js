@@ -29,12 +29,12 @@ class Main extends React.Component {
       },
       {
         target: "path",
-        content: "Move on to the next level!",
+        content: "Click here to move on to the next level!",
         disableBeacon: "true",
       },
       {
         target: ".instructions",
-        content: "What does this level want you to accomplish?",
+        content: "Here is a description of what this level wants you to accomplish!",
         disableBeacon: "true",
       },
       {
@@ -227,8 +227,8 @@ class Main extends React.Component {
                 arrowColor: '#FFFFFF',
                 backgroundColor: '#FFFFFF',
                 overlayColor: '#ffffff00',
-                primaryColor: '#7AA9BF',
-                textColor: '#7AA9BF',
+                primaryColor: '#8EB9DB',
+                textColor: '#8EB9DB',
                 width: undefined,
                 zIndex: 100,
               }
