@@ -44,9 +44,13 @@ function Tabs(props) {
                             styling = 'parent';
                         // check if current sticker has an id and set content accordingly
                         if (element[1] === null) 
-                            return (<p className={styling}>&#60;{element[0]}/&#62;</p>);
+                            return (<p className={styling} onMouseOver={() => console.log("Hello!")}>
+                                        &#60;{element[0]}/&#62;
+                                    </p>);
                         else 
-                            return (<p className={styling}>&#60;{element[0]} id="{element[1]}"/&#62;</p>);
+                            return (<p className={styling} onMouseOver={() => console.log("Hello!")}>
+                                        &#60;{element[0]} id="{element[1]}"/&#62;
+                                    </p>);
                     })}
                 </div>
             </div>
