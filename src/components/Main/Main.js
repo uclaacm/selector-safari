@@ -2,7 +2,7 @@ import React from "react";
 import LevelNav from "../LevelNav/LevelNav";
 import LevelMenu from "../LevelMenu/LevelMenu";
 import Build from "../Build/Build";
-import Textbox from "../Textbox/Textbox";
+import Tabs from "../Tabs/Tabs";
 import Tutorial from "../Tutorial/Tutorial";
 import { levels } from "../../components/levels";
 import { maxLevel, sticker_names } from "../../constants/constants";
@@ -201,11 +201,11 @@ class Main extends React.Component {
             <div className="Description">
               <p className="instructions">{curLevel.instructions}</p>
             </div>
-            <Textbox
+            <Tabs 
               level={levelNum}
               onValueChange={this.handleValueChange}
               key={levelNum}
-            />
+            />            
             {this.state.solved && (
               <div className="next">
                 <p className="next-message">Great job!</p>

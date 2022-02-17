@@ -1,18 +1,18 @@
 .Header {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--header-bg-color);
-    min-width: 100%;
-    flex-wrap: wrap;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--header-bg-color);
+  min-width: 100%;
+  flex-wrap: wrap;
+}
+
 .Title {
-    display: flex;
-    padding-left: 30px;
-    font-size: 45px;
-    align-items: center;
-    font-family: "Fredoka One";
-    color: var(--menu-bg-color);
+  display: flex;
+  padding-left: 30px;
+  font-size: 45px;
+  align-items: center;
+  font-family: "Fredoka One";
+  color: var(--menu-bg-color);
 }
 
 .Header-link, .Level-sidebar {
@@ -23,45 +23,45 @@
     color: var(--menu-bg-color);
 }
 
-.NavButtons{
-    display: flex;
+.NavButtons {
+  display: flex;
 }
 
 .TutorialButton {
-    display: flex;
-    align-items: center;
-    padding-right: 80px;
+  display: flex;
+  align-items: center;
+  padding-right: 80px;
 }
 
 .columns {
-    display: flex;
+  display: flex;
 }
 
 .col {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    background-color: var(--console-bg-color);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: var(--console-bg-color);
 }
 
 .Description {
-    background-color: var(--menu-bg-color);
-    color: var(--header-bg-color);
-    padding: 0 30px;
+  background-color: var(--menu-bg-color);
+  color: var(--header-bg-color);
+  padding: 0 40px;
 }
 
 .instructions {
-    font-family: "Lato";
+  font-family: "Lato";
 }
 
 .next {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .next-message {
-    display: inline-block;
-    padding-right: 1em;
-    font-family: "Lato";
+  display: inline-block;
+  padding-right: 1em;
+  font-family: "Lato";
 }
 
 .next-button, .level-tutorial-button {
@@ -76,7 +76,6 @@
 }
 
 .next-button:focus {
-    background-color: var(--header-bg-color);
-    color: var(--menu-bg-color);
+  background-color: var(--header-bg-color);
+  color: var(--menu-bg-color);
 }
-
