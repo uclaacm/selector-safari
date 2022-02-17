@@ -11,10 +11,10 @@ function Tabs(props) {
     let htmlContentArray = [];
 
     levels[props.level - 1].gamepieces.forEach((gamepiece) => {
-        htmlContentArray.push([gamepiece.constructor.name, gamepiece.name, false]);
+        htmlContentArray.push([gamepiece.constructor.name, gamepiece.name, gamepiece.class_name, false]);
         if (gamepiece.children) {
             gamepiece.children.forEach((child) => {
-                htmlContentArray.push([child.constructor.name, child.name, true]);
+                htmlContentArray.push([child.constructor.name, child.name, gamepiece.class_name, true]);
             })}
     });
 
@@ -38,15 +38,15 @@ function Tabs(props) {
                     {htmlContentArray.map((element) => {
                         let styling;
                         // check whether component is child or parent and applying styling accordingly
-                        if (element[2] === true)
+                        if (element[3] === true)
                             styling = 'children';
                         else
                             styling = 'parent';
                         // check if current sticker has an id and set content accordingly
                         if (element[1] === null) 
-                            return (<p className={styling}>&#60;{element[0]}/&#62;</p>);
+                            return (<p className={styling}>&#60;{element[0]} class="{element[2]}"/&#62;</p>);
                         else 
-                            return (<p className={styling}>&#60;{element[0]} id="{element[1]}"/&#62;</p>);
+                            return (<p className={styling}>&#60;{element[0]} id="{element[1]}" class="{element[2]}"/&#62;</p>);
                     })}
                 </div>
             </div>
