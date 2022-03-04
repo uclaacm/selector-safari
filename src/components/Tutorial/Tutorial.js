@@ -13,7 +13,11 @@ const css = [
 }`,
     `#George, .animal, Zebra {
         color: (255, 200, 100);
-}`
+}`,
+    `#Lisa #Leon{
+        color: (150, 255, 255);
+    }
+}`,
 ]
 
 const text = [
@@ -82,7 +86,20 @@ const text = [
         Will turn the element George, all elements with the class animal, and Zebras mango orange!
     </div>,
     <div>
-        TODO: descendant combinator tutorial
+        A common way to organize HTML elements is by making an element a descendant of another. What does that mean? Take a look at the HTML below. Notice that Lisa the Leopard's HTML tag doesn't close until after two Leopards and a Zebra are declared within it. You can tell because of the Leopard closing tag (with the <b>/></b>) underneath the Zebra tag, which matches Lisa the Leopard's opening tag.
+        <br/><br/>
+        Notice that the indented HTML tags underneath Lisa are the descendant elements of Lisa. Indenting descendants is good practice. When you see indented HTML tags, it's a clue that you're probably working with descendants!
+        <br/><br/>
+        Now, how do we specify that we want to style a descendant in CSS? Let's explore this with our current level.
+        <br/><br/>
+        Notice that Leon the Leopard is a descendant of Lisa the Leopard. Say we want to style Leon to be a bright blue. To style Leon in CSS, we first write a selector for Leon's parent. Then, just write a space after this selector and write a selector for Leon:
+
+        <br/><br/>
+        <div className="code-text">
+            {css[4]}
+        </div>
+        <br/>
+        This CSS turns the element Leon a sky blue!
     </div>
 ]
 
