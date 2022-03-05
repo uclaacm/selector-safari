@@ -86,7 +86,7 @@ const text = [
         Will turn the element George, all elements with the class animal, and Zebras mango orange!
     </div>,
     <div>
-        A common way to organize HTML elements is by making an element a descendant of another. What does that mean? Take a look at the HTML below. Notice that Lisa the Leopard's HTML tag doesn't close until after two Leopards and a Zebra are declared within it. You can tell because of the Leopard closing tag (with the <b>/></b>) underneath the Zebra tag, which matches Lisa the Leopard's opening tag.
+        A common way to organize HTML elements is by making an element a descendant of another. What does that mean? Take a look at the HTML below. Notice that Lisa the Leopard's HTML tag doesn't close until after two Leopards and a Zebra are declared within it. You can tell because of the Leopard closing tag (with the <b>/&gt;</b>) underneath the Zebra tag, which matches Lisa the Leopard's opening tag.
         <br/><br/>
         Notice that the indented HTML tags underneath Lisa are the descendant elements of Lisa. Indenting descendants is good practice. When you see indented HTML tags, it's a clue that you're probably working with descendants!
         <br/><br/>
