@@ -241,7 +241,7 @@ class Main extends React.Component {
           </div>
         </div>
         <LevelMenu show={this.state.open} />
-        {this.state.showTutorial && <Tutorial level={curLevel} />}
+        <Tutorial level={curLevel} />
         <div className="columns">
           <div className="col">
             <div className="Description">
