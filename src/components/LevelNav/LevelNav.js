@@ -17,9 +17,9 @@ function LevelNav(props) {
         <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
-        <Link to={`/level/${nextLevelNum}`}>
+        <Link to={`/level/${nextLevelNum}`} onClick={props.levelChange}>
           {" "}
-          <FaAngleRight />{" "}
+          <FaAngleRight/>{" "}
         </Link>
       </div>
     );
@@ -28,7 +28,7 @@ function LevelNav(props) {
   {
     return (
       <div className={"LevelNav" + (props.show ? " open" : "")}>
-        <Link to={`/level/${prevLevelNum}`}>
+        <Link to={`/level/${prevLevelNum}`} onClick={props.levelChange}>
           {" "}
           <FaAngleLeft />{" "}
         </Link>
@@ -41,14 +41,14 @@ function LevelNav(props) {
   else {
     return (
       <div className={"LevelNav" + (props.show ? " open" : "")}>
-        <Link to={`/level/${prevLevelNum}`}>
+        <Link to={`/level/${prevLevelNum}`} onClick={props.levelChange}>
           {" "}
           <FaAngleLeft />{" "}
         </Link>
         <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
-        <Link to={`/level/${nextLevelNum}`}>
+        <Link to={`/level/${nextLevelNum}`} onClick={props.levelChange}>
           {" "}
           <FaAngleRight />{" "}
         </Link>

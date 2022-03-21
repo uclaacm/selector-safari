@@ -81,6 +81,12 @@ class Main extends React.Component {
     });
   };
 
+  levelChange = () => {
+    this.setState({
+      solved: false,
+    });
+  };
+
   handleValueChange = (value) => {
     this.applyStyles(value);
     let res = this.check();
@@ -228,6 +234,7 @@ class Main extends React.Component {
             </a>
             <LevelNav
               toggle={this.toggleOpen}
+              levelChange={this.levelChange}
               show={this.state.open}
               levelNum={this.props.match.params.levelNum}
             />
