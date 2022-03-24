@@ -2,7 +2,7 @@ import React from "react";
 import "./LevelNav.css";
 import { minLevel, maxLevel } from "../../constants/constants";
 import { Link } from "react-router-dom";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight} from "react-icons/fa";
 
 function LevelNav(props) {
   const levelNum = parseInt(props.levelNum ?? minLevel);
@@ -13,7 +13,10 @@ function LevelNav(props) {
   if (levelNum === 1)
   {
     return (
-      <div className={"LevelNav" + (props.show ? " open" : "")}>
+      <div className={"LevelNav" + (props.show ? " open" : "")} >
+         <Link style={{opacity: 0.5}}> {" "}
+          <FaAngleLeft />{" "}
+          </Link>
         <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
@@ -35,6 +38,9 @@ function LevelNav(props) {
         <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
+        <Link style={{opacity: 0.5}}> {" "}
+          <FaAngleRight />{" "}
+        </Link>
       </div>
     );
   }
