@@ -14,6 +14,7 @@ class Main extends React.Component {
     open: false,
     stickerStyles: {},
     solved: false,
+    skippedWarning: false,
     showTutorial: false,
     tooltipsteps: [
       {
@@ -84,8 +85,15 @@ class Main extends React.Component {
   levelChange = () => {
     this.setState({
       solved: false,
+      skippedWarning: false,
     });
   };
+
+  showWarning = () => {
+    this.setState({
+      skippedWarning: true,
+    })
+  }
 
   handleValueChange = (value) => {
     this.applyStyles(value);
@@ -235,9 +243,36 @@ class Main extends React.Component {
             <LevelNav
               toggle={this.toggleOpen}
               levelChange={this.levelChange}
+              showWarning={this.showWarning}
+              skippedWarning={this.state.skippedWarning}
               show={this.state.open}
               levelNum={this.props.match.params.levelNum}
             />
+            {this.state.skippedWarning && !this.state.solved && (
+              <Joyride
+                steps={
+                  [
+                    {
+                      target: ".Level-sidebar",
+                      content: "Completion of prior levels is recommended before continuing",
+                      disableBeacon: "true",
+                    }
+                  ]
+                }
+                showSkipButton={true}
+                disableOverlay={true}
+                styles={{
+                  options: {
+                    arrowColor: '#00000',
+                    backgroundColor: '#FFFFFF',
+                    primaryColor: '#000000',
+                    textColor: '#000000',
+                    width: undefined,
+                    zIndex: 100,
+                  }
+                }}
+              />
+            )}
           </div>
         </div>
         <LevelMenu show={this.state.open} />

@@ -10,17 +10,33 @@ function LevelNav(props) {
   const prevLevelNum = Math.max(levelNum - 1, minLevel);
   const nextLevelNum = Math.min(levelNum + 1, maxLevel);
 
+  let incrLevel;
+
+  if (!props.skippedWarning)
+  {
+      incrLevel = <FaAngleRight className="LevelNavArrow" onClick={props.showWarning}/>
+  }
+  else
+  {
+      incrLevel = <Link to={`/level/${nextLevelNum}`} onClick={props.levelChange}>
+                      {" "}
+                      <FaAngleRight/>{" "}
+                  </Link>
+  }
+
+  function toggle() {
+    props.toggle();
+    props.showWarning();
+  }
+
   if (levelNum === 1)
   {
     return (
       <div className={"LevelNav" + (props.show ? " open" : "")}>
-        <p className="Level-sidebar" onClick={props.toggle}>
+        <p className="Level-sidebar" onClick={toggle}>
           {`Level ${levelNum}`}
         </p>
-        <Link to={`/level/${nextLevelNum}`} onClick={props.levelChange}>
-          {" "}
-          <FaAngleRight/>{" "}
-        </Link>
+       {incrLevel}
       </div>
     );
   }
@@ -48,10 +64,7 @@ function LevelNav(props) {
         <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
-        <Link to={`/level/${nextLevelNum}`} onClick={props.levelChange}>
-          {" "}
-          <FaAngleRight />{" "}
-        </Link>
+        {incrLevel}
       </div>
     );
   }
