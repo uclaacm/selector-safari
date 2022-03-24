@@ -98,6 +98,7 @@ class Main extends React.Component {
       let nextLevel = parseInt(curLevel) + 1;
       this.props.history.push(`/level/${nextLevel}`);
     }
+    this.handleNewLevel();
   };
 
   applyStyles = (() => {
@@ -187,6 +188,11 @@ class Main extends React.Component {
     return res;
   };
 
+  handleNewLevel = () => {
+    this.handleValueChange(""); // When navigating to a new level, remove any styling of the elements (regardless of value inside CSS tab, pretend like it's empty)
+    // Note there are two places you can change level: top right arrows or the "Next level" button once you finish a level
+  }
+
   render() {
     let levelNum = this.props.match.params.levelNum;
     let curLevel = levels[levelNum - 1];
@@ -227,6 +233,7 @@ class Main extends React.Component {
               <button class="level-tutorial-button">Level Tutorial</button>
             </a>
             <LevelNav
+              prepareLevel={this.handleNewLevel}
               toggle={this.toggleOpen}
               show={this.state.open}
               levelNum={this.props.match.params.levelNum}
