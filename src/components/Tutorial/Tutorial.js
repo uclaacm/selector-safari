@@ -38,7 +38,7 @@ const text = [
     </div>,
     <div> 
         The Type selector allows you to select an element by its type. In selector safari the type of sticker will be its species. 
-        Generally in HTML, an elements type is the word that comes after the first “&lt”.
+        Generally in HTML, an elements type is the word that comes after the first “&lt;”.
         <br/><br/>
         For example the type of:
         <div> 

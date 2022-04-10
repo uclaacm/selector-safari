@@ -10,20 +10,45 @@ function LevelNav(props) {
   const prevLevelNum = Math.max(levelNum - 1, minLevel);
   const nextLevelNum = Math.min(levelNum + 1, maxLevel);
 
+  let incrLevel;
+
+  if (!props.skippedWarning)
+  {
+      incrLevel = <FaAngleRight className="LevelNavArrow" onClick={prepShowWarning}/>
+  }
+  else
+  {
+      incrLevel = <Link to={`/level/${nextLevelNum}`} onClick={prepLevelChange}>
+                      {" "}
+                      <FaAngleRight/>{" "}
+                  </Link>
+  }
+
+  function toggle() {
+    props.toggle();
+    props.showWarning();
+    props.prepareLevel();
+  }
+
+  function prepLevelChange() {
+    props.prepareLevel();
+    props.levelChange();
+  }
+
+  function prepShowWarning()
+  {
+    props.showWarning();
+    props.prepareLevel();
+  }
+
   if (levelNum === 1)
   {
     return (
-      <div className={"LevelNav" + (props.show ? " open" : "")} >
-         <Link onClick={props.prepareLevel} style={{opacity: 0.5}}> {" "}
-          <FaAngleLeft />{" "}
-          </Link>
-        <p className="Level-sidebar" onClick={props.toggle}>
+      <div className={"LevelNav" + (props.show ? " open" : "")}>
+        <p className="Level-sidebar" onClick={toggle}>
           {`Level ${levelNum}`}
         </p>
-        <Link onClick={props.prepareLevel} to={`/level/${nextLevelNum}`}>
-          {" "}
-          <FaAngleRight />{" "}
-        </Link>
+       {incrLevel}
       </div>
     );
   }
@@ -31,7 +56,7 @@ function LevelNav(props) {
   {
     return (
       <div className={"LevelNav" + (props.show ? " open" : "")}>
-        <Link onClick={props.prepareLevel} to={`/level/${prevLevelNum}`}>
+        <Link to={`/level/${prevLevelNum}`} onClick={prepLevelChange}>
           {" "}
           <FaAngleLeft />{" "}
         </Link>
@@ -47,17 +72,14 @@ function LevelNav(props) {
   else {
     return (
       <div className={"LevelNav" + (props.show ? " open" : "")}>
-        <Link onClick={props.prepareLevel} to={`/level/${prevLevelNum}`}>
+        <Link to={`/level/${prevLevelNum}`} onClick={prepLevelChange}>
           {" "}
           <FaAngleLeft />{" "}
         </Link>
         <p className="Level-sidebar" onClick={props.toggle}>
           {`Level ${levelNum}`}
         </p>
-        <Link onClick={props.prepareLevel} to={`/level/${nextLevelNum}`}>
-          {" "}
-          <FaAngleRight />{" "}
-        </Link>
+        {incrLevel}
       </div>
     );
   }

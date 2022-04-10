@@ -33,3 +33,9 @@
     color: var(--header-bg-color);
 }
 
+.LevelNavArrow {
+    color: var(--menu-bg-color);
+    margin-top: 5px;
+    font-size: 50px;
+}
+
